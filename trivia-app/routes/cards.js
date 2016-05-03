@@ -36,13 +36,7 @@ router.get('/:category', (req, res) => {
 			res.send(cards);
 		}
 	})
-	// Card.getByCategory(req.params.category, (err, cards) => {
-	// 	if(err) {
-	// 		res.status(400).send(err);
-	// 	} else {
-	// 		res.send(cards);
-	// 	}
-	// })
+
 })
 
 module.exports = router;

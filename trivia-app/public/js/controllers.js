@@ -67,7 +67,7 @@ app.controller('cardsController', function($scope, $state, Card) {
      .then(res => {
         $scope.cards = res.data;
         var cards = $scope.cards;
-        console.log(cards);
+        // console.log(cards);
     })
     .catch(err => {
         console.log('err:', err);
@@ -85,6 +85,8 @@ app.controller('cardsController', function($scope, $state, Card) {
         }
     };
 
-
+    $scope.removeCard = function(card) {
+        $scope.cards.splice(0, 1);
+    }
     
 });

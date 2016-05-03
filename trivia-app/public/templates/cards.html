@@ -6,8 +6,12 @@
 		  	  <h3 class="card-title">The Question is...</h3>
 		  	  	<p class="card-text question"><content>{{card.question}}</content></p>
 
-		  	  	<a href="#" ng-click='toggleDiv($event)' class="btn btn-primary answer">Get Answer</a>
+		  	  	<a href="#" ng-click='toggleDiv($event)' class="btn btn-lg btn-primary answer">Get Answer</a>
 		  	  	<p class="card-text answer" ng-show="isVisible">Answer: {{card.answer}}</p>
+				<div>
+		  	  		<button class="btn btn-lg btn-success glyphicon glyphicon-pencil update" ng-click="removeCard()"></button>
+		  	  		<button class="btn btn-lg btn-danger glyphicon glyphicon-trash update" ng-click="removeCard()"></button>
+		  	  	</div>
 		  	</div>
 		</div>
 

@@ -23,6 +23,10 @@ body {
 	margin-top: 20px;
 }
 
+.update {
+	margin-top: 1%;
+	margin-bottom: 2%;
+}
 .card {
 	min-height: 200px;
 }
