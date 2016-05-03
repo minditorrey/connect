@@ -1,7 +1,8 @@
 
 <div class="row cardDiv">
-	<div class="col-sm-9 col-offset-2" ng-model="Burger" ng-repeat="card in cards">
-		<div class="card card-inverse" style="background-color: #333; border-color: #333;">
+	<div class="col-sm-9 col-offset-2">
+		
+		<div ng-model="Burger" ng-repeat="card in cards"class="card card-inverse" style="background-color: #333; border-color: #333;">
 		  	<div class="card-block">
 		  	  <h3 class="card-title">The Question is...</h3>
 		  	  	<p class="card-text question"><content>{{card.question}}</content></p>
@@ -9,11 +10,14 @@
 		  	  	<a href="#" ng-click='toggleDiv($event)' class="btn btn-lg btn-primary answer">Get Answer</a>
 		  	  	<p class="card-text answer" ng-show="isVisible">Answer: {{card.answer}}</p>
 				<div>
-		  	  		<button class="btn btn-lg btn-success glyphicon glyphicon-pencil update" ng-click="removeCard()"></button>
+		  	  		<button class="btn btn-lg btn-success glyphicon glyphicon-pencil update" ng-click="editCard()"></button>
 		  	  		<button class="btn btn-lg btn-danger glyphicon glyphicon-trash update" ng-click="removeCard()"></button>
 		  	  	</div>
 		  	</div>
 		</div>
-
+		
 	</div>
 </div>
+<div class="row addQ">
+		<button class="btn btn-lg btn-success" ui-sref="addQuestion">Add Question</button>
+		</div>

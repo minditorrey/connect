@@ -24,6 +24,10 @@ app.controller('categoriesController', function($scope, $state) {
 
 });
 
+app.controller('addQuestionController', function($scope, $state) {
+
+});
+
 app.controller('dragDetailsController', function($scope, $state, Card) {
     Card.getByCategory()
      .then(res => {
@@ -89,4 +93,9 @@ app.controller('cardsController', function($scope, $state, Card) {
         $scope.cards.splice(0, 1);
     }
     
+    // $scope.addQuestion = function() {
+    //     $scope.showAddForm = function() {
+
+    //     }
+    // }
 });
