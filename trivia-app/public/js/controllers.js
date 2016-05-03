@@ -4,8 +4,7 @@ var app = angular.module('triviaApp');
 
 app.controller('mainController', function($scope) {
     $scope.setCategory = function(catChoice) {
-        $scope.catChoice = catChoice;
-       
+        $scope.catChoice = catChoice;   
     }
 
     $scope.isVisible = true; 
