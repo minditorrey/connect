@@ -6,7 +6,7 @@
     "Mindi Torrey <minditorrey@me.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/minditorrey/like-it",
+  "homepage": "https://github.com/minditorrey/face-page",
   "ignore": [
     "**/.*",
     "node_modules",
