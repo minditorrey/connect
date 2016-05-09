@@ -4,7 +4,8 @@ var express = require('express');
 var path = require('path');
 var router = express.Router();
 
-router.use('/nextRoute, require('./nextRoute'));
+router.use('/users', require('./users'));
+router.use('/posts', require('./posts'));
 
 
 module.exports = router;
