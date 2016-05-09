@@ -36,3 +36,17 @@ app.service('Auth', function($http, $q) {
   };
 
 });
+
+app.service('PostSvc', function($http) {
+	this.create = post => {
+		return $http.post('/api/posts', post);
+	}
+	this.getAll = () => {
+		return $http.get('api/posts');
+	}
+
+	this.removePost = (post) => {
+  	return $http.delete(`/api/posts/${post._id}`)
+  }
+
+});
