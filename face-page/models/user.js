@@ -12,8 +12,18 @@ if(!JWT_SECRET) {
 }
 
 var userSchema = new mongoose.Schema({
-  username: { type: String, required: true, unique: true },
-  password: { type: String, required: true }
+  username: { type: String, unique: true },
+  password: { type: String },
+  profile: { type: Object,
+            properties: { 
+            image: { type: String}, 
+            bio: { type: String},
+            hobbies: { type: String},
+            dead: { type: String} 
+            }
+          },
+  twitter: String
+
 });
 
 // IT'S MIDDLEWARE!!

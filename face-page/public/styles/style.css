@@ -3,6 +3,15 @@ body {
 
 }
 
+.black {
+	background-color: black;
+	color: white;
+}
+
+.profile {
+	margin-top: 10px;
+}
+
 h1 {
 	font-size: 72px;
 	padding-left: 5%;

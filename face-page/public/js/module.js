@@ -1,10 +1,10 @@
-var app = angular.module('facePageApp', ['ui.router']);
+var app = angular.module('facePageApp', ['ui.router', 'satellizer']);
 
 app.run(function(Auth) {
   Auth.getProfile();
 });
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider, $authProvider) {
 
 	$stateProvider
 		.state('home', {
@@ -22,9 +22,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
       		templateUrl: '/templates/authForm.html',
       		controller: 'authFormCtrl'
     	})
-		.state('profile', {
-      		url: '/profile',
-      		templateUrl: '/templates/profile.html',
+		.state('profiles', {
+      		url: '/profiles',
+      		templateUrl: '/templates/profiles.html',
       		controller: 'profileCtrl',
       		resolve: {
         		profile: function(Auth, $q, $state) {

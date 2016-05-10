@@ -2,47 +2,89 @@
 
 var app = angular.module('facePageApp');
 
-app.controller('profileCtrl', function() {
+app.controller('profileCtrl', function($scope, ProfileSvc) {
+
+
+  $scope.profileForm = true;
+
+    $scope.showProfileForm = function(){
+      $scope.profileForm = true;  
+    };
+
+  $scope.showProfileForm = function() {
+    if($scope.profileForm = false) {
+      $scope.profileForm = true;  
+    } else {
+      $scope.profileForm = false;
+    };
+  };
+
+  $scope.profiles = [];
+  $scope.saveProfileForm = function(thisProfileEdit) {
+    ProfileSvc.create($scope.thisProfileEdit);
+    console.log($scope.thisProfileEdit);
+    $scope.thisProfile = $scope.thisProfileEdit;  
+    $scope.profiles.push($scope.thisProfileEdit);
+    $scope.updateUser();
+    $scope.thisProfileEdit = "null";
+    $scope.profileForm = true;
+    
+  }
+ 
+  $scope.updateUser = () => {
+    ProfileSvc.update($scope.thisProfileEdit)
+      .then(res => {
+        $scope.users.forEach((user, i) => {
+          if(user._id === res.data._id) {
+            $scope.users[i] = res.data;
+          }
+        })
+      })
+
+
+  }
+
   console.log('profileCtrl!');
 });
 
-app.controller('mainCtrl', function($scope, $state, Auth) {
+app.controller('mainCtrl', function($scope, $state, Auth, $auth) {
 
-  $scope.$watch(function() {
-    return Auth.currentUser;
-  }, function(newVal, oldVal) {
-    $scope.currentUser = newVal;
-  });
+  // $scope.$watch(function() {
+  //   return Auth.currentUser;
+  // }, function(newVal, oldVal) {
+  //   $scope.currentUser = newVal;
+  // });
 
   $scope.logout = () => {
-    Auth.logout()
-      .then(res => {
-        $state.go('home');
-      })
+    $auth.logout();
+  }
+
+  $scope.isAuthenticated = () => {
+    // return $auth.isAuthenticated();
   }
 
 });
 
-app.controller('homeCtrl', function($scope, PostSvc) {
-	$scope.posts = [];
-	$scope.submitPost = function(thisPost) {
-		PostSvc.create($scope.thisPost);
-		console.log(thisPost);
-		$scope.posts.push($scope.thisPost);
-		// $scope.saveChanges();
-		$scope.thisPost = "null";
-	};
-	PostSvc.getAll($scope.posts)
-		.then(res => {
-			$scope.posts = res.data;
-			var posts = $scope.posts;
-		})
+app.controller('homeCtrl', function($scope) {
+	// $scope.posts = [];
+	// $scope.submitPost = function(thisPost) {
+	// 	PostSvc.create($scope.thisPost);
+	// 	console.log(thisPost);
+	// 	$scope.posts.push($scope.thisPost);
+	// 	// $scope.saveChanges();
+	// 	$scope.thisPost = "null";
+	// };
+	// PostSvc.getAll($scope.posts)
+	// 	.then(res => {
+	// 		$scope.posts = res.data;
+	// 		var posts = $scope.posts;
+	// 	})
 
-	$scope.removePost = function(post) {
-        PostSvc.removePost(post);
-        $scope.posts.splice(0, 1);
-        location.reload;
-    }
+	// $scope.removePost = function(post) {
+ //        PostSvc.removePost(post);
+ //        $scope.posts.splice(0, 1);
+ //        location.reload;
+ //    }
 
 	// $scope.editPost = (post) => {
  //        $scope.thisPost = angular.copy(post);
@@ -57,19 +99,25 @@ app.controller('homeCtrl', function($scope, PostSvc) {
  //        })
  //    }
 
-    $scope.likes = "";
-    $scope.likePost = (post) => {
-    	$scope.likes ++;
-    }
+    // $scope.likes = "";
+    // $scope.likePost = (post) => {
+    // $scope.likes ++;
+    // }
 
 });
 
 
 
-app.controller('authFormCtrl', function($scope, $state, Auth) {
+app.controller('authFormCtrl', function($scope, $state, Auth, $auth) {
   console.log('authFormCtrl!');
 
   $scope.currentState = $state.current.name;
+
+  $scope.authenticate = provider => {
+    $auth.authenticate(provider);
+
+  };
+
 
   $scope.submitForm = () => {
     if($scope.currentState === 'register') {

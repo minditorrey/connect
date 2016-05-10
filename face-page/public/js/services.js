@@ -24,7 +24,7 @@ app.service('Auth', function($http, $q) {
   };
 
   this.getProfile = () => {
-    return $http.get('/api/users/profile')
+    return $http.get('/api/users/profiles')
       .then(res => {
         this.currentUser = res.data;
         return $q.resolve(res.data);
@@ -37,16 +37,29 @@ app.service('Auth', function($http, $q) {
 
 });
 
-app.service('PostSvc', function($http) {
-	this.create = post => {
-		return $http.post('/api/posts', post);
-	}
-	this.getAll = () => {
-		return $http.get('api/posts');
-	}
-
-	this.removePost = (post) => {
-  	return $http.delete(`/api/posts/${post._id}`)
+app.service('ProfileSvc', function($http) {
+  
+  this.create = profile => {
+    return $http.post('/api/profiles', profile);
   }
 
+  this.update = user => {
+    return $http.put(`/api/users/${user._id}`, user);
+  }
 });
+
+
+
+// app.service('PostSvc', function($http) {
+// 	this.create = post => {
+// 		return $http.post('/api/posts', post);
+// 	}
+// 	this.getAll = () => {
+// 		return $http.get('api/posts');
+// 	}
+
+// 	this.removePost = (post) => {
+//   	return $http.delete(`/api/posts/${post._id}`)
+//   }
+
+// });
