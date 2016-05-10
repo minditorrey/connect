@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var User = require('../models/user');
+var Profile = require('../models/profile')
 
 
 //Do Crud Things:
@@ -29,9 +30,28 @@ router.delete('/logout', (req, res) => {
   res.clearCookie('accessToken').send();
 });
 
-router.get('/profile', User.isLoggedIn, (req, res) => {
+router.get('/profiles', User.isLoggedIn, (req, res) => {
 	res.send(req.user);
 });
+
+router.post('/profiles', (req, res) => {
+  Profile.create(req.body, err => {
+    res.status(err ? 400 : 200).send(err);
+  });
+});
+
+router.route('/:id')
+  .delete((req, res) => {
+    var user = (req.body)
+    User.findByIdAndRemove(req.params.id, (err, user) => {
+      res.status(err ? 400 : 200).send(err);
+    })
+  })
+  .put((req, res) => {
+    User.findByIdAndUpdate(req.params.id, { $set: req.body }, (err, user) => {
+      res.status(err ? 400 : 200).send(err || user)
+    })
+  })
 
 
 module.exports = router;
