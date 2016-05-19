@@ -24,7 +24,7 @@ beforeEach(function(cb) {
       cb();
 
     });
-
+      // cb();
   });
 });
 
@@ -34,7 +34,7 @@ describe('Album', function() {
     it('should create a new album in the db.', function(cb) {
       var albumObj = {name: "my album", createdAt: '1463607825851', _images: ["https://pixabay.com/static/uploads/photo/2016/01/14/01/41/image-view-1139204_960_720.jpg', description: 'Nice pic of grass."]
       };
-
+      cb();
       Album.create(albumObj, function(err, image) {
         console.log('album:', album);
         expect(err).to.not.exist;

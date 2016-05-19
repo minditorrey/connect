@@ -26,6 +26,7 @@ beforeEach(function(cb) {
 				cb();
 
 			});
+				cb();
 		})
 	})
 // });
@@ -43,7 +44,7 @@ describe('Image', function() {
 		// 	//I don't fucking understand this shit
 		// }
 		// })
-
+		cb();
 		Image.create(imageObj, function(err, image) {
 			console.log('image:', image);
 			expect(err).to.not.exist;
