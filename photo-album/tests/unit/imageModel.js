@@ -16,12 +16,10 @@ before(function(cb) {
 });
 
 beforeEach(function(cb) {
-	console.log('BEFOREEACH')
-
 	Image.remove({}, err => {
-		var albumObj= 	{name: 'my album'}
-		Album.create(albumObj, function(err, album) {
-			if(err) cb(err);
+		// var albumObj= 	{name: 'my album'}
+		// Album.create(albumObj, function(err, album) {
+		// 	if(err) cb(err);
 			Image.create({
 				url: 'https://pixabay.com/static/uploads/photo/2016/01/14/01/41/image-view-1139204_960_720.jpg', description: 'Nice pic of grass.'
 			}, (err, image) => {
@@ -29,9 +27,8 @@ beforeEach(function(cb) {
 
 			});
 		})
-
 	})
-});
+// });
 
 
 describe('Image', function() {
@@ -40,12 +37,12 @@ describe('Image', function() {
 		it('should create a new image in the db.', function(cb) {
 			var imageObj = {url: "http://i.imgur.com/YOnKbIy.jpg", createdAt: '1463607825851', description: "New profile pic!", 
 		};
-		Album.findOne({},(err, album) => {
-			if(err || !dbAlbum) {
-			cb(err || dbAlbum);
-			//I don't fucking understand this shit
-		}
-		})
+		// Album.findOne({},(err, album) => {
+		// 	if(err || !dbAlbum) {
+		// 	cb(err || dbAlbum);
+		// 	//I don't fucking understand this shit
+		// }
+		// })
 
 		Image.create(imageObj, function(err, image) {
 			console.log('image:', image);
@@ -56,7 +53,7 @@ describe('Image', function() {
 		});
 	});
 	})
-	
+
 })
 
 after(function(cb) {

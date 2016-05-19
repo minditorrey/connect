@@ -13,11 +13,8 @@ var cookieParser = require('cookie-parser');
  
 require('dotenv').config();
 
-if(process.env.TESTING) {
-	const MONGOURL = process.env.MONGODB_URI || 'mongodb://localhost/tests';
-} else {
-	const MONGOURL = process.env.MONGODB_URI || 'mongodb://localhost/photoApp';
-}
+
+const MONGOURL = process.env.MONGODB_URI || 'mongodb://localhost/photoApp';
 
 mongoose.connect(MONGOURL, err => {
 	console.log(err || `Connected to MongoDB at ${MONGOURL}`)

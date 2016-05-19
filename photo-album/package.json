@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "TESTING=true mocha ./test/** -R landing"
   },
   "author": "",
   "license": "ISC",
@@ -18,10 +19,7 @@
     "moment": "^2.13.0",
     "mongoose": "^4.4.17",
     "morgan": "^1.7.0",
-    "serve-favicon": "^2.3.0"
-  },
-    "scripts": {
-    "start": "node app.js",
-    "test": "TESTING=true mocha ./test/** -R landing"
-  },
+    "serve-favicon": "^2.3.0",
+    "supertest": "^1.2.0"
+  }
 }
