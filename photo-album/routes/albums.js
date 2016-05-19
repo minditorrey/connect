@@ -20,6 +20,7 @@ router.post('/', (req, res) => {
 });
 
 
+
 router.route('/:id')
   	.put((req, res) => {
     	Album.findByIdAndUpdate(req.params.id, { $set: req.body }, (err, image) => {
