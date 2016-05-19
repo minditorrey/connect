@@ -36,3 +36,5 @@ var server = http.createServer(app);
 server.listen(PORT, err => {
   console.log(err || `Server listening on port ${PORT}`);
 });
+
+module.exports = app;

@@ -41,7 +41,6 @@ describe('Image', function() {
 		// Album.findOne({},(err, album) => {
 		// 	if(err || !dbAlbum) {
 		// 	cb(err || dbAlbum);
-		// 	//I don't fucking understand this shit
 		// }
 		// })
 		cb();
