@@ -6,8 +6,6 @@ app.controller('mainController', function($scope, AlbumService) {
     $scope.isVisible = true; 
 
     $scope.toggleDiv = function(event) {
-        // event.preventDefault(); // included to show how to prevent default behavior
-        // event.stopPropagation(); // included to show how to stop propagation
         if ($scope.isVisible === false){
             $scope.isVisible = true;
         } else {
