@@ -34,7 +34,7 @@ router.route('/:id')
     	})
   	})
     .get((req, res) => {
-      Album.findById(req.params.id, function (err, album) {
+      Album.findById(req.params.id).populate('_images').exec(function (err, album) {
         res.status(err ? 400 : 200).send(err || album);
         console.log('album:', album);
       });

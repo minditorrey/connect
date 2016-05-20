@@ -11,7 +11,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			controller: 'homeController'
 		})		
 		.state('images', {
-			url: '/images',
+			url: '/images/:id',
 			templateUrl: '/templates/images.html',
 			controller: 'imagesController'
 		})
