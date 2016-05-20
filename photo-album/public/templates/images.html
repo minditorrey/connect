@@ -3,11 +3,13 @@
 <div class="row">
 	<div class="col-sm-6 col-sm-offset-3">
 		
-		<div class="well">
-		<img class="pics" width="400" max-height="350" ng-src="{{image.url}}">
-		<label class="imageBy" for="">Photo Cred: {{image.takenBy}}</label>
-        <button class="btn btn-md btn-default glyphicon glyphicon-trash removeImg" ng-click="removeImage(image)"></button>
+		<div class="well imgLg">
+		<img class="pics" width="500" max-height="350" ng-src="{{image.url}}">	
+
+        <p class="imageBy">Photo Cred: {{image.takenBy}}</p>
         <p class="imageDesc">Description: {{image.description}}</p>
+        <button class="btn btn-md btn-default glyphicon glyphicon-trash removeLgImg" ng-click="removeImage(image)"></button>
+
 		</div>
 
 	</div>

@@ -67,6 +67,10 @@ div.album:hover {
 	color: #ff9719;
 }
 
+.imageDesc {
+	margin-top: 2%;
+}
+
 .removeImg {
 	float: right;
 	margin-right: 5%;
@@ -76,4 +80,13 @@ div.album:hover {
 	margin-left: 3%;
 	margin-right: 3%;
 	margin-top: 5%;
+}
+
+.imgLg {
+	margin-top: 5%;
+}
+
+.removeLgImg {
+	margin-top: 3%;
+	margin-left: 1%;
 }
