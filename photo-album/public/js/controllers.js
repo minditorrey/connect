@@ -22,7 +22,8 @@ app.controller('detailsController', function($scope, $state, $stateParams, Album
     AlbumService.getThisAlbum($stateParams.id)
     .then(res => {
         $scope.album = res.data;
-
+        $scope.images = $scope.album._images;
+        console.log('scope.images', $scope.images);
         var albumID = $scope.album._id;
         console.log("album images:", $scope.album._images);
        
@@ -41,25 +42,22 @@ app.controller('detailsController', function($scope, $state, $stateParams, Album
         })
     }
 
-    ImageService.getAll($scope.images)
-        .then(res => {
-            $scope.images = res.data;
-        })
-        .catch(err => {
-            console.log('err:', err);
-        });
+
+    // ImageService.getAll($scope.images)
+    //     .then(res => {
+    //         $scope.images = res.data;
+    //     })
+    //     .catch(err => {
+    //         console.log('err:', err);
+    //     });
 
     $scope.removeImage = function(image) {
         ImageService.removeImage(image);
         $scope.images.splice(0, 1);
     }
 
-   
-
 
 });
-
-
 
 
 app.controller('homeController', function($scope) {

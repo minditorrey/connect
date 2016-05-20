@@ -44,5 +44,7 @@ app.service('ImageService', function($http) {
       console.log('id:', id);
       return $http.get(`/api/images/${id}`)
     }
+
+
 })
 

@@ -3,13 +3,12 @@
 <div class="row">
 	<div class="col-sm-6 col-sm-offset-3">
 		
-		<div class="well">
+		<div class="well" ng-repeat="image in images">
 		<img class="pics" width="400" max-height="350" ng-src="{{image.url}}">
 		<label class="imageBy" for="">Photo Cred: {{image.takenBy}}</label>
         <button class="btn btn-md btn-default glyphicon glyphicon-trash removeImg" ng-click="removeImage(image)"></button>
         <p class="imageDesc">Description: {{image.description}}</p>
 		
-
 
 	</div>
 </div>
