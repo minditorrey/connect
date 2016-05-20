@@ -1,1 +1,18 @@
-<h1>Images</h1>
+
+<div class="form-group">
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3">
+
+  	<form ng-model="imageForm">
+		
+			<label> Image Url:</label>
+			<input class="form-control" ng-model='editFormImage.url' placeholder="url"/>
+			<label>Created By: {{image.takenBy}}</label>
+			<input class="form-control" ng-model='editFormImage.takenBy' placeholder="Photographer"/>
+	
+    		<button type="button" class="btn btn-lg  glyphicon glyphicon-plus addImage" ng-click="addImage(imageForm)">Add</button>
+
+  		</div>
+  	</form>
+</div>
+</div>

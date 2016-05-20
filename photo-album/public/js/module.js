@@ -20,7 +20,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			templateUrl: '/templates/albums.html',
 			controller: 'albumsController'
 		})
-
+		.state('details', {
+			url: '/details/:id',
+			templateUrl: '/templates/details.html',
+			controller: 'detailsController'
+		})
 
 
 	$urlRouterProvider.otherwise('/');

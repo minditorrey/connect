@@ -7,6 +7,7 @@ var jwt = require('jsonwebtoken');
 
 var albumSchema = new mongoose.Schema({
   	name: { type: String, required: true, unique: true },
+  	createdBy: { type: String },
 	_images: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Image' }]
 }, 
 {

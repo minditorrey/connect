@@ -1,0 +1,78 @@
+body {
+	margin: 3%;
+	background-color: #73d0f4;
+	font-family: 'Candal', sans-serif;
+	color: white;
+	margin-left: 0;
+}
+
+h1 {
+	font-size: 56px;
+	margin-left 0;
+}
+
+.btn-lg {
+	background-color: #ff9719;
+}
+
+.albums {
+	background-color: #ff9719;
+	margin-top: 10%;
+	margin-left: 1%;
+}
+
+
+.album {
+	text-align: center;
+	margin-top: 5%;
+}
+
+.albumsRow {
+	margin-top: 5%;
+
+}
+
+.form-group {
+	margin-top: 5%;
+}
+
+.btn-md {
+	background-color: #ff9719;
+}
+
+div.album:hover { 
+    color: #ff9719;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.albumDeets {
+	margin-left: 9%;
+}
+
+.addImage {
+	margin-top: 3%;
+}
+
+.newImage {
+	margin-bottom: 3%;
+}
+
+.addAlbum {
+	margin-top: 3%;
+}
+
+.imageBy, .imageDesc {
+	margin-left: 2%;
+}
+
+.removeImg {
+	float: right;
+	margin-right: 5%;
+}
+
+.imagesRow {
+	margin-left: 3%;
+	margin-right: 3%;
+}

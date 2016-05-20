@@ -33,5 +33,13 @@ router.route('/:id')
       		res.status(err ? 400 : 200).send(err);
     	})
   	})
+    .get((req, res) => {
+      Album.findById(req.params.id, function (err, album) {
+        res.status(err ? 400 : 200).send(err || album);
+        console.log('album:', album);
+      });
+    });
+
 
 module.exports = router;
+
