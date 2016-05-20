@@ -9,11 +9,13 @@
 
 
 <div class="imagesRow row">
-	<div ng-repeat="image in images" class="col-sm-3 pics">
-		<img class="pics" width="300" max-height="150" ng-src="{{image.url}}">
+	<div ng-repeat="image in images" ui-sref="images({id: image._id})" ng-click="getThisImage(image)" class="col-sm-3 pics">
+		<div class="well">
+		<img class="pics" width="240" max-height="150" ng-src="{{image.url}}">
 		<label class="imageBy" for="">Photo Cred: {{image.takenBy}}</label>
         <button class="btn btn-md btn-default glyphicon glyphicon-trash removeImg" ng-click="removeImage(image)"></button>
         <p class="imageDesc">Description: {{image.description}}</p>
+        </div>
 	</div>
 </div>
 

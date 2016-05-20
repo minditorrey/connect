@@ -5,6 +5,7 @@ var path = require('path');
 var router = express.Router();
 
 var Image = require('../models/image');
+var Album = require('../models/album');
 
 
 
@@ -33,6 +34,11 @@ router.route('/:id')
       		res.status(err ? 400 : 200).send(err);
     	})
   	})
-
+    .get((req, res) => {
+      Image.findById(req.params.id, function (err, image) {
+      res.status(err ? 400 : 200).send(err || image);
+      console.log('this image:', image);
+  });
+});
 
 module.exports = router;

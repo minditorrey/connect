@@ -40,5 +40,9 @@ app.service('ImageService', function($http) {
   		return $http.delete(`/api/images/${image._id}`)
   	}
 
+    this.getThisImage = (id) => {
+      console.log('id:', id);
+      return $http.get(`/api/images/${id}`)
+    }
 })
 

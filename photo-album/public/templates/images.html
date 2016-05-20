@@ -1,18 +1,15 @@
 
-<div class="form-group">
+
 <div class="row">
 	<div class="col-sm-6 col-sm-offset-3">
-
-  	<form ng-model="imageForm">
 		
-			<label> Image Url:</label>
-			<input class="form-control" ng-model='editFormImage.url' placeholder="url"/>
-			<label>Created By: {{image.takenBy}}</label>
-			<input class="form-control" ng-model='editFormImage.takenBy' placeholder="Photographer"/>
-	
-    		<button type="button" class="btn btn-lg  glyphicon glyphicon-plus addImage" ng-click="addImage(imageForm)">Add</button>
+		<div class="well">
+		<img class="pics" width="400" max-height="350" ng-src="{{image.url}}">
+		<label class="imageBy" for="">Photo Cred: {{image.takenBy}}</label>
+        <button class="btn btn-md btn-default glyphicon glyphicon-trash removeImg" ng-click="removeImage(image)"></button>
+        <p class="imageDesc">Description: {{image.description}}</p>
+		
 
-  		</div>
-  	</form>
-</div>
+
+	</div>
 </div>

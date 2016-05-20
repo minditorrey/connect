@@ -68,10 +68,6 @@ imageSchema.statics.edit = function(imageObj, cb) {
 
 
 
-
-
-
-
 var Image = mongoose.model('Image', imageSchema);
 
 module.exports = Image;

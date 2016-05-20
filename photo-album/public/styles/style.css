@@ -64,6 +64,7 @@ div.album:hover {
 
 .imageBy, .imageDesc {
 	margin-left: 2%;
+	color: #ff9719;
 }
 
 .removeImg {

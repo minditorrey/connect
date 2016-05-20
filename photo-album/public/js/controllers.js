@@ -54,6 +54,8 @@ app.controller('detailsController', function($scope, $state, $stateParams, Album
         $scope.images.splice(0, 1);
     }
 
+   
+
 
 });
 
@@ -66,9 +68,18 @@ app.controller('homeController', function($scope) {
 
 });
 
-app.controller('imagesController', function($scope, ImageService) {
+app.controller('imagesController', function($rootScope, $scope, $state, $stateParams, ImageService) {
     console.log('imagesCtrl!');
+    console.log('stateparams:', $stateParams.id)
 
+    ImageService.getThisImage($stateParams.id)
+    .then(res => {
+        $scope.image = res.data;
+        console.log($scope.image);
+    })
+    .catch(err => {
+        console.log('err:', err);
+    });
 
 
     
