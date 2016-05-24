@@ -1,0 +1,39 @@
+{
+  "name": "connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "engines": {
+    "node": "5.10.1",
+    "npm": "3.8.3"
+    },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "bower": "^1.7.9",
+    "cookie-parser": "^1.4.2",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "express-stormpath": "^3.1.2",
+    "mongoose": "^4.4.19",
+    "morgan": "^1.7.0",
+    "stormpath": "^0.18.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minditorrey/connect.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minditorrey/connect/issues"
+  },
+  "homepage": "https://github.com/minditorrey/connect#readme"
+}

@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-1">
+
+	</div>	
+
+</div>
+<div >
+<div class="form-group">
+<div class="row">		
+  	<form ng-hide="AlbumForm" ng-model="editFormAlbum" ng-submit='saveChanges(editFormAlbum)'>
+		<div class="col-sm-6 col-sm-offset-3">
+			<label>Album Name:</label>
+			<input class="form-control" ng-model='editFormAlbum.name' placeholder="Vacation"/>
+			<label>Created By:</label>
+			<input class="form-control" ng-model='editFormAlbum.createdBy' placeholder="Your Name"/>
+	
+    		<button type="button" class="btn btn-lg glyphicon glyphicon-plus addAlbum" ng-click="addAlbum(editFormAlbum)">New</button>
+
+  		</div>
+  	</form>
+</div>
+</div>
+</div>
+<div class="albumsRow row">
+	<div ui-sref="details({id: album._id})" ng-click="getThisAlbum(album)"ng-repeat="album in albums" class="col-sm-3 album">
+		<img width="300" ng-src="{{coverImage}}" alt="">
+		<label class="albumName" for="">{{album.name}}</label>
+        <button class="btn btn-md btn-default glyphicon glyphicon-trash removeBtn" ng-click="removeAlbum(album)"></button>
+	</div>
+</div>
+

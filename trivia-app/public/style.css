@@ -1,0 +1,119 @@
+body {	
+	background: linear-gradient(to left, #517fa4 , #243949);
+	margin: 2%;
+	color: white;
+	text-align: center;
+}
+
+.answer {
+	margin-top: 30px;
+}
+
+.card {
+	margin-left: 36%;
+	vertical-align: middle;
+	padding-top: 6px;
+}
+.cardDiv {
+	text-align: center;
+	vertical-align: middle;
+}
+
+h3 {
+	margin-left: 15px;
+}
+.card-title {
+	margin-top: 20px;
+}
+
+.questionWell {
+	margin-left: 200px;
+}
+.addQuestion {
+	text-align: center;
+}
+
+
+.addQ {
+	text-align: center;
+	margin-bottom: 2%;
+	margin-top: 2%;
+}
+.update {
+	margin-top: 1%;
+	margin-bottom: 2%;
+}
+.card {
+	min-height: 200px;
+}
+.well {
+	text-align: center;
+	color: #335168;
+	box-shadow: 3px 3px 2px #515354;
+}
+
+.cardsButton {
+	margin-top: 4%;
+	margin-bottom: 5%;
+}
+.thumb {
+	width: 100%;
+	max-width: 150px;
+	max-height: 150px;
+	margin-bottom: 3%;
+}
+
+
+.ready {
+	font-size: 20px;
+}
+
+#chooseBtn {
+	text-align: center;
+
+}
+
+h1 {
+	font-size: 76px;
+}
+
+h2 {
+	font-size: 28px;
+	margin-top: -1%;
+	margin-bottom: 5%;
+	margin-left: 675px;
+}
+img {
+	display: block;
+	margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 350px;
+}
+
+.box {
+text-align: center;
+
+}
+
+
+.imgNoShadow {
+	display: block;
+	margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 375px;	
+}
+
+.imgLarge {
+	display: block;
+	margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    max-width: 1100px;
+    height: 300px;
+    box-shadow: 4px 4px 3px #515354;
+}

@@ -1,0 +1,29 @@
+<div class="row well tableRow">
+	<div class="col-sm-10 col-sm-offset-1">
+		<div class="searchBox">
+			<label class="searchBox green" for="search"><span class="glyphicon glyphicon-search"></span> Search Check Ins:</label>
+			<input class = "searchInput" type="text" ng-model="sortByName">
+		</div>
+
+		<table class="table table-striped">
+		  <thead>
+		    <tr>
+		      <th></th>
+		      <th></th>
+		      <th>Date</th>
+		      <th>Mood</th>
+
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr class="orange" ui-sref="details({id: checkIn._id})" ng-click="getThisCheckIn(checkIn)" ng-repeat="checkIn in checkIns | filter: sortByName">
+		      <td><img class="itemImage img-responsive" ng-src="{{profilePic}}" width="75" alt=""></td>
+		      <td>{{user.username}}</td>
+		      <td>{{checkIn.date | date: "MM/dd/yyyy 'at' h:mma"}}</td>
+		      <td>{{checkIn.mood}}</td>
+
+			</tr>
+		  </tbody>
+		</table>
+	</div>
+</div> <!-- end well -->
