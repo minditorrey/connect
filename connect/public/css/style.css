@@ -1,0 +1,31 @@
+body {
+  background: url(https://s-media-cache-ak0.pinimg.com/736x/eb/89/4d/eb894dd988735b27031513355260fc4e.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+}
+
+.navbar {
+	background-color: black;
+	border: none;
+	height: 75px;
+
+}
+
+.navbar-btn {
+	color: #b40f0f;
+	font-size: 18px;
+	margin-top: 6%;
+	background-color: black;
+}
+
+.profilePic {
+	box-shadow: 3px 3px 3px gray;
+}
+
+.headWell {
+	background-color: black;
+	opacity: .8;
+}
+
