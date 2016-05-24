@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('finalApp');
+var app = angular.module('connectApp');
 
 // app.service('ProfileService', function($http) {
 	

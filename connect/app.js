@@ -16,7 +16,7 @@ require('dotenv').config();
 
 
 
-const MONGOURL = process.env.MONGODB_URI || 'mongodb://localhost/finalApp';
+const MONGOURL = process.env.MONGODB_URI || 'mongodb://localhost/connectApp';
 
 mongoose.connect(MONGOURL, err => {
 	console.log(err || `Connected to MongoDB at ${MONGOURL}`)

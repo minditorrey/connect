@@ -1,4 +1,4 @@
-var app = angular.module('finalApp', ['ui.router', 'stormpath', 'stormpath.templates']);
+var app = angular.module(connectApp', ['ui.router', 'stormpath', 'stormpath.templates']);
 
 app.run(function($stormpath){
   $stormpath.uiRouter({
@@ -24,7 +24,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     		templateUrl: '/html/register.html' 
     	})
     	.state('items', {
-			url: '/auctions',
+			url: '/items',
 			templateUrl: '/html/items.html',
 			controller: 'itemsController',
 			sp: {

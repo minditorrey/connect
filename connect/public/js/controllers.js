@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('finalApp');
+var app = angular.module('connectApp');
 
 app.controller('homeController', function($scope) {
     console.log('homeCtrl!');

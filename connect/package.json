@@ -1,21 +1,8 @@
 {
-  "name": "mean-stormpath",
+  "name": "connect",
   "version": "1.0.0",
-  "description": "template",
+  "description": "",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": 
-  },
-  "author": "minditorrey@me.com",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/minditorrey/mean-stormpath/issues"
-  },
-  "homepage": "https://github.com/minditorrey/mean-stormpath#readme",
   "dependencies": {
     "body-parser": "^1.15.1",
     "bower": "^1.7.9",
@@ -26,5 +13,19 @@
     "mongoose": "^4.4.19",
     "morgan": "^1.7.0",
     "stormpath": "^0.18.2"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minditorrey/connect.git"
+  },
+  "author": "minditorrey@me.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minditorrey/connect/issues"
+  },
+  "homepage": "https://github.com/minditorrey/connect#readme"
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tender</title>
+  <title>connect</title>
   <!-- <link rel="stylesheet" href="/bower_components/sweetalert/dist/sweetalert.css"> -->
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
@@ -14,20 +14,19 @@
   <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="/bower_components/stormpath-sdk-angularjs/dist/stormpath-sdk-angularjs.min.js"></script>
   <script src="/bower_components/stormpath-sdk-angularjs/dist/stormpath-sdk-angularjs.tpls.min.js"></script>
-  <script src="https://cdn.rawgit.com/globaljake/simple-inline-countdown-directive/master/directive/countdownTimer.js"></script>
 
   <script src="/js/module.js"></script>
   <script src="/js/controllers.js"></script>
   <script src="/js/services.js"></script>
 </head>
-<body ng-app='finalApp'>
+<body ng-app='connectApp'>
   <div class="container-fluid head">
 
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
         <a class="navbar-brand" href="#">
-          <img alt="Brand" src="/images/umbrella.png">
+          <img alt="Brand" src="/images/connect3.png">
         </a>
             <button class="navbar-btn btn" if-not-user ui-sref='login'>Login</button>            
 
@@ -40,8 +39,6 @@
       </div>
     </nav>
     
-
-
 
 
         <ui-view></ui-view>
