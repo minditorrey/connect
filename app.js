@@ -13,7 +13,7 @@ var cookieParser = require('cookie-parser');
 var stormpath = require('express-stormpath');
 
 require('dotenv').config();
-
+console.log("HASDAS")
 
 
 const MONGOURL = process.env.MONGODB_URI || 'mongodb://localhost/connectApp';
