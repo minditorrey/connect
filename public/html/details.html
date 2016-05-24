@@ -1,0 +1,24 @@
+
+
+<div class="row tableRow">
+	<div class="col-sm-6 col-sm-offset-3">
+		<div class="well headWell detailsWell">
+			<h5 class="items">Date: <span class="indent">{{checkIn.date | date: "MM/dd/yyyy 'at' h:mma"}}</span></h5> 
+
+			<h5 class="itemInfo green">Current Mood: <span class="indent">{{checkIn.mood}}</span></h5>
+			<h5 class="itemInfo green">Grateful For: <span class="indent">{{checkIn.grateful}}</span></h5>
+			<h5 class="itemInfo green">Concerned About: <span class="indent">{{checkIn.concerns}}</span></h5>
+			<h5 class="itemInfo green">Needs for today: <span class="indent">{{checkIn.needs}}</span></h5>
+			<h5 class="itemInfo expires green">Goals for today: <span class="indent">{{checkIn.goals}}</span></h5>
+		</div>
+	</div>
+</div> <!-- end well -->
+	
+<div class="row tableRow">
+	<div class="col-sm-6 col-sm-offset-3">
+		<div class="well headWell detailsWell">
+			<img ng-src="{{checkIn.url}}" alt="">
+			<h5 class="itemInfo expires green">Share: <span class="indent">{{checkIn.share}}</span></h5>
+		</div>
+	</div>
+</div> 

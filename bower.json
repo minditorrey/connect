@@ -1,0 +1,25 @@
+{
+  "name": "connect",
+  "description": "CRUD app",
+  "main": "app.js",
+  "authors": [
+    "minditorrey@me.com"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/minditorrey/connect.git",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.3.0",
+    "bootstrap": "^3.3.6",
+    "stormpath-sdk-angularjs": "stormpath-sdk-angular#^1.0.0",
+    "angular-bootstrap": "^1.3.3"
+  }
+}
