@@ -2,6 +2,7 @@
 
 var app = angular.module('connectApp');
 
+
 // app.service('ProfileService', function($http) {
 	
 // 	this.nameSort = (username) => {
@@ -11,26 +12,26 @@ var app = angular.module('connectApp');
 	
 // })
 
-// app.service('AuctionsService', function($http) {
+app.service('CheckInService', function($http) {
 
-// 	this.getAll = () => {
-//     	return $http.get('/api/auctions');
-//   	};
+	this.getAll = () => {
+    	return $http.get('/api/checkIns');
+  	};
 
-// 	this.create = auction => {
-//     	return $http.post('/api/auctions', auction);
-//   	}
+	this.create = checkIn => {
+    	return $http.post('/api/checkIns', checkIn);
+  	}
 	
-// 	this.update = auction => {
-//     	return $http.put(`/api/auctions/${auction._id}`, auction);
-//   	}
+	this.update = checkIn => {
+    	return $http.put(`/api/checkIns/${checkIn._id}`, checkIn);
+  	}
 
-//   	this.removeAuction = (auction) => {
-//   		return $http.delete(`/api/auctions/${auction._id}`)
-//   	}
+  	this.removecheckIn = (checkIn) => {
+  		return $http.delete(`/api/checkIns/${checkIn._id}`)
+  	}
 
-//   	this.getThisAuction = (id) => {
-//   		return $http.get(`/api/auctions/${id}`);
-//   	}
+  	this.getThisCheckIn = (id) => {
+  		return $http.get(`/api/checkIns/${id}`);
+  	}
 
-// })
+})

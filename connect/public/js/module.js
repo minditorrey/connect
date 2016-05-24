@@ -1,4 +1,4 @@
-var app = angular.module(connectApp', ['ui.router', 'stormpath', 'stormpath.templates']);
+var app = angular.module('connectApp', ['ui.router', 'stormpath', 'stormpath.templates']);
 
 app.run(function($stormpath){
   $stormpath.uiRouter({
@@ -23,10 +23,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
     		url: '/register', 
     		templateUrl: '/html/register.html' 
     	})
-    	.state('items', {
-			url: '/items',
-			templateUrl: '/html/items.html',
-			controller: 'itemsController',
+    	.state('checkIns', {
+			url: '/checkIns',
+			templateUrl: '/html/checkIns.html',
+			controller: 'checkInsController',
 			sp: {
 				authenticate: true
 			}

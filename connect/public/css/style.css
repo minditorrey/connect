@@ -6,6 +6,24 @@ body {
   background-size: cover; 
 }
 
+.greeting {
+	margin-left: 3%;
+	color: #2B2B2B;
+}
+
+label {
+	color: #2B2B2B;
+}
+
+.btn-md {
+	background-color: #3bbbac;
+	margin-left: 3%;
+}
+
+.addCheckIn {
+	margin-left: 0;
+}
+
 .navbar {
 	background-color: black;
 	border: none;
@@ -17,7 +35,7 @@ body {
 .navbar-btn {
 	color: #3bbbac;
 	font-size: 18px;
-	margin-top: 3%;
+	margin-top: 6%;
 	background-color: black;
 
 }
@@ -31,3 +49,20 @@ body {
 	opacity: .8;
 }
 
+.detailsWell {
+	margin-top: 5%;
+}
+
+.indent {
+	margin-left: 1%;
+	color: #3bbbac;
+}
+
+h5 {
+	font-size: 18px;
+	color: #DEDEDE;
+}
+
+.formRow {
+	margin-bottom: 5%;
+}
