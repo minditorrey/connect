@@ -6,7 +6,7 @@
   <!-- <link rel="stylesheet" href="/bower_components/sweetalert/dist/sweetalert.css"> -->
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/style.css">
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/bower_components/angular/angular.min.js"></script>
@@ -21,25 +21,35 @@
 </head>
 <body ng-app='connectApp'>
   <div class="container-fluid head">
-
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-        <a class="navbar-brand" href="#">
+    <div class="header">
+      
+    </div>
           <img alt="Brand" src="/images/connect3.png">
-        </a>
-            <button class="navbar-btn btn" if-not-user ui-sref='login'>Login</button>            
-
-            <button class="navbar-btn btn" sp-logout if-user ui-sref='home'>Logout</button>
-            <button class="navbar-btn btn" if-not-user ui-sref='register'>Register</button>
-            <button class="navbar-btn btn" ui-sref='profiles'>Profile</button>            
-            <button class="navbar-btn btn" ui-sref='checkIns'>Check Ins</button>
-             
-      </div>
-      </div>
-    </nav>
-    
-
+          </a>
+        </div>
+        
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a class="navLinks" ui-sref='home'>Home</a>             
+            </li>            
+            <li>
+              <a class="navLinks" if-not-user ui-sref='login'>Login</a>             
+            </li>
+            <li>
+              <a class="navLinks" sp-logout if-user ui-sref='home'>Logout</a>
+            </li>
+            <li>
+              <a class="navLinks" if-not-user ui-sref='register'>Register</a>
+            </li>
+            <li>
+              <a class="navLinks" ui-sref='profiles'>Profile</a>        
+            </li>
+            <li>
+              <a class="navLinks" ui-sref='checkIns'>Check Ins</a>
+            </li>
+          </ul>
+ 
+  </div>
 
         <ui-view></ui-view>
 

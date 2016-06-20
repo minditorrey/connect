@@ -1,14 +1,20 @@
 body {
-  background: url(https://s-media-cache-ak0.pinimg.com/736x/eb/89/4d/eb894dd988735b27031513355260fc4e.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; 
+	background: url(../images/ferriswheel.jpg) no-repeat top center fixed;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+
+
+}
+
+div.header {
+
 }
 
 .greeting {
 	margin-left: 3%;
-	color: #2B2B2B;
+	color: #C7D1DD;
 }
 
 label {
@@ -24,29 +30,30 @@ label {
 	margin-left: 0;
 }
 
-.navbar {
-	background-color: black;
-	border: none;
-	height: 75px;
-	opacity: .8;
+
 
 }
 
-.navbar-btn {
+.navLinks {
 	color: #3bbbac;
 	font-size: 18px;
 	margin-top: 6%;
-	background-color: black;
+
 
 }
 
 .profilePic {
 	box-shadow: 3px 3px 3px gray;
+	min-width: 150px;
+
 }
 
 .headWell {
 	background-color: black;
 	opacity: .8;
+	margin-left: 5%;
+	min-width: 225px;
+	max-width: 225px;
 }
 
 .detailsWell {
@@ -63,6 +70,10 @@ h5 {
 	color: #DEDEDE;
 }
 
+h6 {
+	font-size: 16px;
+	color: #3bbbac;}
+
 .formRow {
 	margin-bottom: 5%;
 }
@@ -72,4 +83,84 @@ tr.orange:hover {
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+}
+.top {
+	margin-top: 3%;
+}
+.bottom {
+	margin-bottom: 3%;
+}
+.center {
+	text-align: center;
+}
+.left {
+	text-align: left;
+}
+/*blocks*/
+.fa {
+	font-size: 3em;
+	margin-top: 5%;
+}
+.blocks {
+	margin-left: 3%;
+	margin-right: 3%;
+
+	
+}
+
+div.block h2, div.checkInBlock h2 {
+	font-size: 1.4em;
+}
+.block {
+	min-width: 175px;
+	max-width: 200px;
+	margin-top: 5%;
+	min-height: 100px;
+	max-height: 100px;
+	margin-right: 5%;
+	margin-left: 5%;
+	text-align: center;
+	opacity: .9;
+	color: #C7D1DD;
+	box-shadow: 3px 3px 3px #3C3B40;
+	background-color: #3bbbac;
+}
+
+
+/*checkIn*/
+
+.checkInBlock {
+	min-width: 175px;
+	max-width: 200px;
+	margin-top: 5%;
+	min-height: 100px;
+	max-height: 100px;
+	margin-right: 5%;
+	margin-left: 5%;
+	text-align: center;
+	opacity: .9;
+	color: #C7D1DD;
+	box-shadow: 3px 3px 3px #3C3B40;
+	background-color: #3bbbac;
+}
+
+.checkInRow {
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.checkInBox {
+	background-color: #3bbbac;
+	opacity: .9; 
+	color: #C7D1DD;
+}
+
+.checkInComponent {
+	margin-top: 3%;
+}
+
+.card {
+	border: 2px solid #3bbbac;
+	background-color: white;
+	color: #777777;
 }

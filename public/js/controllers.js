@@ -14,6 +14,59 @@ app.controller('checkInsController', function($scope, CheckInService) {
     .catch(err => {
         console.log('err:', err);
     });
+    
+    //mood
+    $scope.openModal = function() {
+        $('#moodModal').modal('show');
+    }
+
+    $scope.addMood = function() {
+        if($('#fatigued').is(':checked')) {
+            $scope.negativeMood = "fatigued";
+        } else if($('#bored').is(':checked')) {
+            $scope.negativeMood = "bored";
+        } else if($('#sad').is(':checked')) {
+            $scope.negativeMood = "sad";
+        } else if($('#upset').is(':checked')) {
+            $scope.negativeMood = "upset";
+        } else if($('#stressed').is(':checked')) {
+            $scope.negativeMood = "stressed";
+        } else if($('#nervous').is(':checked')) {
+            $scope.negativeMood = "nervous";
+        } else if($('#tense').is(':checked')) {
+            $scope.negativeMood = "tense";
+        };
+        if($('#excited').is(':checked')) {
+            $scope.positiveMood = "excited";
+        } else if($('#elated').is(':checked')) {
+            $scope.positiveMood = "elated";
+        } else if($('#happy').is(':checked')) {
+            $scope.positiveMood = "happy";
+        } else if($('#content').is(':checked')) {
+            $scope.positiveMood = "content";
+        } else if($('#serene').is(':checked')) {
+            $scope.positiveMood = "serene";
+        } else if($('#relaxed').is(':checked')) {
+            $scope.positiveMood = "relaxed";
+        } else if($('#calm').is(':checked')) {
+            $scope.positiveMood = "calm";
+        }
+       
+    }
+
+    $scope.cancelMood = function(){
+        $('#moodModal').modal('hide');
+    }
+
+    // concerns
+    $scope.openModal = function() {
+        $('#concernsModal').modal('show');
+    }
+
+
+    $scope.cancelConcerns = function(){
+        $('#concernsModal').modal('hide');
+    }
 });
 
 app.controller('homeController', function($scope, CheckInService) {
@@ -95,14 +148,15 @@ app.controller('profilesController', function($scope, $state, $rootScope) {
 app.controller('detailsController', function($scope, $state, $rootScope, $stateParams, CheckInService) {
 
 
-CheckInService.getThisCheckIn($stateParams.id)
-    .then(res => {
-        $scope.checkIn = res.data;
-
-    })
-    .catch(err => {
-        console.log('err:', err);
-    });
+    CheckInService.getThisCheckIn($stateParams.id)
+        .then(res => {
+            $scope.checkIn = res.data;
+    
+        })
+        .catch(err => {
+            console.log('err:', err);
+        });
      
 });
+
 

@@ -1,54 +1,37 @@
 <h3 class="greeting">Hello, {{user.username}}</h3>
-
-
-
-<button ng-click="showCheckInForm()" class="btn btn-md checkIn">Check-In</button>
-<div class="row formRow">
-	<div class="col-sm-7 col-sm-offset-2">
+<div class="row">
+<div class="col-xs-10 col-xs-offset-1">
+	<div class="row blocks">
 		
-		<form ng-model="checkInEdit" ng-hide="checkInForm" ng-submit="saveChanges(CheckInEdit)">
-			<div class="form-group">
-				<label for="">Today's Date: </label>
-				<input ng-model='checkInEdit.date' class="form-control" type="datetime-local" >			
-			</div>			
-			<div class="form-group">
-				<label for="">General Mood: </label>
-				<input ng-model='checkInEdit.mood' class="form-control" type="text" placeholder="happy, content, anxious, angry">			
-			</div>
-			<div class="form-group">
-				<label for="">Things I'm grateful for: </label>
-				<input ng-model='checkInEdit.grateful' class="form-control" type="text" placeholder="puppies, our home, someone who does the finances">
-			</div>
-			<div class="form-group">
-				<label for="">Things I'm concerned about: </label>
-				<input ng-model='checkInEdit.concerns' class="form-control"type="text" placeholder="financial insecurity, stable job">
-			</div>
+		<div ui-sref="checkIns" class="block checkIns col-xs-4">
+			<i class="fa fa-map-marker" aria-hidden="true"></i>
+			<h2>checkIns</h2>
+		</div>	
+		<div class="block situations col-xs-4">
+			<i class="fa fa-thumb-tack" aria-hidden="true"></i>
+			<h2>situations</h2>
+		</div>	
+		<div class="block calendar col-xs-4">
+			<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+			<h2>calendar</h2>
+		</div>	
 			
-			<div class="form-group">
-			<label for="">Things I need: </label>
-			<input ng-model='checkInEdit.needs' class="form-control"type="text" placeholder="emotional support, time off">
-			</div>
-
-			<div class="form-group">
-			<label for="">Goals for today: </label>
-			<input ng-model='checkInEdit.goals' class="form-control"type="text" placeholder="look kindly at myself">
-			</div>
-
-			<div class="form-group">
-			<label for="">Want to communicate something? Share it here: </label>
-			<input ng-model='checkInEdit.share' class="form-control"type="text" placeholder="share things">
-			</div>
-
-			<div class="form-group">
-			<label for="">Want to share an image? Post the url here: </label>
-			<input ng-model='checkInEdit.url' class="form-control"type="text" placeholder="url">
-			</div>
-
-		<button ng-click="addCheckIn(checkInEdit)"class="btn btn-md addCheckIn">Add Check-In</button>
-		<button ng-click='cancelEdit()'class="btn btn-md cancelSave">Cancel Edit</button>
-		<button class="btn btn-md saveForm">Save Edit</button>
-
-		</form>
-
+	</div>
+	<div class="row blocks">
+		<div class="block memories col-xs-4">
+			<i class="fa fa-camera-retro" aria-hidden="true"></i>
+			<h2>memories</h2>
+		</div>
+		<div class="block messages col-xs-4">
+			<i class="fa fa-envelope" aria-hidden="true"></i>
+			<h2>messages</h2>
+		</div>
+		<div class="block puffs col-xs-4">
+			<i class="fa fa-bolt" aria-hidden="true"></i>
+			<h2>reflections</h2>
+		</div>
 	</div>
 </div>
+</div>
+
+
