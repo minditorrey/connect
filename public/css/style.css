@@ -1,15 +1,32 @@
 body {
-	background: url(../images/ferriswheel.jpg) no-repeat top center fixed;
-	-webkit-background-size: 100%;
-	-moz-background-size: 100%;
-	-o-background-size: 100%;
-	background-size: 100%;
-
-
+	background: url(../images/ferriswheel_50.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: white;
 }
 
-div.header {
+h3 {
+	color: white;
+}
 
+h4 {
+	color: #777777;
+}
+
+h5 {
+	font-size: 18px;
+	color: #DEDEDE;
+}
+
+h6 {
+	font-size: 16px;
+	color: #3bbbac;
+}
+
+.grayBtn {
+	color: #777777;
 }
 
 .greeting {
@@ -17,8 +34,14 @@ div.header {
 	color: #C7D1DD;
 }
 
+.green {
+	background-color: #3bbbac;
+	color: white;
+
+}
+
 label {
-	color: #2B2B2B;
+	color: #777777;
 }
 
 .btn-md {
@@ -65,14 +88,6 @@ label {
 	color: #3bbbac;
 }
 
-h5 {
-	font-size: 18px;
-	color: #DEDEDE;
-}
-
-h6 {
-	font-size: 16px;
-	color: #3bbbac;}
 
 .formRow {
 	margin-bottom: 5%;
@@ -139,7 +154,7 @@ div.block h2, div.checkInBlock h2 {
 	margin-left: 5%;
 	text-align: center;
 	opacity: .9;
-	color: #C7D1DD;
+	color: white;
 	box-shadow: 3px 3px 3px #3C3B40;
 	background-color: #3bbbac;
 }
@@ -164,3 +179,12 @@ div.block h2, div.checkInBlock h2 {
 	background-color: white;
 	color: #777777;
 }
+
+textarea {
+	width: 400px;
+    height: 120px;
+}
+
+
+
+

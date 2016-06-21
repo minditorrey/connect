@@ -2,23 +2,23 @@
 <div class="row checkInRow">
 	<div class="col-xs8 col-xs-offset-2">
 		<div class="row blocks">
-			<div ng-click="openModal()" class="checkInBlock mood col-xs-4">
+			<div ng-click="openMoodModal()" class="checkInBlock mood col-xs-4">
 				<i class="fa fa-heartbeat" aria-hidden="true"></i>
 				<h2>mood</h2>
 			</div>
-			<div ng-click="openModal()" class="checkInBlock concerns col-xs-4">
+			<div ng-click="openConcernsModal()" class="checkInBlock concerns col-xs-4">
 				<i class="fa fa-question-circle" aria-hidden="true"></i>
 				<h2>concerns</h2>
 	
 			</div>
-			<div class="checkInBlock needs col-xs-4">
+			<div ng-click="openNeedsModal()" class="checkInBlock needs col-xs-4">
 				<i class="fa fa-hand-paper-o" aria-hidden="true"></i>
 				<h2>needs</h2>
 			</div>
 		</div>
 
 		<div class="row blocks">
-			<div class="checkInBlock mood col-xs-4">
+			<div ng-click="openGoalsModal()" class="checkInBlock mood col-xs-4">
 				<i class="fa fa-calendar" aria-hidden="true"></i>
 				<h2>goals</h2>
 			</div>
@@ -35,7 +35,7 @@
 	</div>
 </div>
 
-<!-- modal for mood -->
+<!-- mood modal -->
 <div class="row">
     <div class="modal fade" id="moodModal" tabindex="-1" role="dialog" aria-labelledby="moodModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -44,7 +44,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title" id="moodModal">What is your general mood today?</h4>
+                    <h4 class="modal-title">What is your general mood today?</h4>
                 </div>
 
                 <div class="modal-body">
@@ -96,15 +96,15 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" ng-click="addMood(mood)">Submit</button>
-                    <button type="button" class="btn btn-primary" ng-click="cancelMood()">Cancel</button>
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addMood(mood)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelMood()">Cancel</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div> <!-- end mood modal -->
 
-<!-- modal for concerns -->
+<!-- concerns modal -->
 <div class="row">
     <div class="modal fade" id="concernsModal" tabindex="-1" role="dialog" aria-labelledby="concernsModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -113,28 +113,144 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title" id="concernsModal">What concerns are weighing on you today?</h4>
+                    <h4 class="modal-title" id="concernsModal">If any, what is the primary concern weighing on you today?</h4>
                 </div>
 
                 <div class="modal-body">
-                    <label>Concern:
+                    <label>Concern: </br>
                         <input id="concernName" type="text">
-                    </label></br>
-                    <label>Description:
+                    </label>
+                    <label class="top">Description: </br>
                         <textarea id="concernDescription" type="text">
                     </textarea>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" ng-click="addMood(mood)">Submit</button>
-                    <button type="button" class="btn btn-primary" ng-click="cancelConcerns()">Cancel</button>
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addConcerns(concern)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelConcerns()">Cancel</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div> <!-- end concerns modal -->
+
+<!-- needs modal -->
+<div class="row">
+    <div class="modal fade" id="needsModal" tabindex="-1" role="dialog" aria-labelledby="needsModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">What relationship needs do you have today?</h4>
+                </div>
+
+                <div class="modal-body">
+                    <label>Need: </br>
+                        <input id="needName1" type="text">
+                    </label></br>
+                    <label class="top">Description: </br>
+                        <textarea id="needDescription1" type="text">
+                    </textarea></br>
+                    <hr>
+                    <label>Need: </br>
+                        <input id="needName2" type="text">
+                    </label></br>
+                    <label class="top">Description: </br>
+                        <textarea id="needDescription2" type="text">
+                    </textarea></br>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addNeeds(needs)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelNeeds()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end needs modal -->
+
+<!-- goals modal -->
+<div class="row">
+    <div class="modal fade" id="goalsModal" tabindex="-1" role="dialog" aria-labelledby="goalsModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Share your primary personal and relationship goals for today:</h4>
+                </div>
+
+                <div class="modal-body">
+                    <label for="goalName1">Personal Goal: </br>
+                    <input id="goalName1" type="text">
+                    </label>
+                    </br>
+                    <label class="top" for="goalDescription1">Description: </br>
+                    <textarea id="goalDescription1" type="text"></textarea>
+                    </label></br>
+                    <hr>
+                	
+                    <label id="goalBox2">Relationship Goal: </br>
+                    <input id="goalName2" type="text"></br>
+                    </label>
+                    <label class="top">Description: </br>
+                    <textarea id="goalDescription2" type="text">
+                    </textarea>
+                	</label></br>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addGoals(goals)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelGoals()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end goals modal -->
 
 
+<!-- hopes modal -->
+<div class="row">
+    <div class="modal fade" id="goalsModal" tabindex="-1" role="dialog" aria-labelledby="goalsModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Share your primary personal and relationship goals for today:</h4>
+                </div>
+
+                <div class="modal-body">
+                    <label for="goalName1">Personal Goal: </br>
+                    <input id="goalName1" type="text">
+                    </label>
+                    </br>
+                    <label class="top" for="goalDescription1">Description: </br>
+                    <textarea id="goalDescription1" type="text"></textarea>
+                    </label></br>
+                    <hr>
+                	
+                    <label id="goalBox2">Relationship Goal: </br>
+                    <input id="goalName2" type="text"></br>
+                    </label>
+                    <label class="top">Description: </br>
+                    <textarea id="goalDescription2" type="text">
+                    </textarea>
+                	</label></br>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addGoals(goals)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelGoals()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end hopes modal -->
 <div class="row bottom">
 	<div class="checkInBox col-xs-8 col-xs-offset-2">
 		<h3>My check-in: </h3>
@@ -146,15 +262,24 @@
 			</div>
 			<div class="col-xs-4 card card-block">
 				<h4 class="card-title checkInComponent">Concerns: </h4>
+				<p class="card-text">{{concernName}}</p>
+				<p class="card-text">{{concernDescription}}</p>
 			</div>
 			<div class="col-xs-4 card card-block">
 				<h4 class="card-title checkInComponent">Needs: </h4>
+				<p class="card-text">{{needName1}}</p>
+				<p class="card-text">{{needDescription1}}</p>
+				<p class="card-text">{{needName2}}</p>
+				<p class="card-text">{{needDescription2}}</p>			
 			</div>
 		</div>
 		<div class="center row">
 			<div class="card card-block left col-xs-4">
 				<h4 class="card-title checkInComponent">Goals:</h4>
-				<p class="card-text"></p>	
+				<p class="card-text">{{goalName1}}</p>
+				<p class="card-text">{{goalDescription1}}</p>
+				<p class="card-text">{{goalName2}}</p>
+				<p class="card-text">{{goalDescription2}}</p>
 			</div>
 			<div class="card card-block left col-xs-4">
 				<h4 class="card-title checkInComponent">Hopes: </h4>
@@ -162,10 +287,10 @@
 			<div class="card card-block left col-xs-4">
 				<h4 class="card-title checkInComponent">Thanks: </h4>
 			</div>
-			<div class="row">
-				<button class="btn btn-default bottom top">Complete Check-in</button>
-			</div>
 		</div>
+			<div class="row center">
+				<button class="btn btn-default bottom top grayBtn">Complete Check-in</button>
+			</div>
 	</div>
 </div>
 	

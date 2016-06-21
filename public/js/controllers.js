@@ -16,7 +16,7 @@ app.controller('checkInsController', function($scope, CheckInService) {
     });
     
     //mood
-    $scope.openModal = function() {
+    $scope.openMoodModal = function() {
         $('#moodModal').modal('show');
     }
 
@@ -59,14 +59,56 @@ app.controller('checkInsController', function($scope, CheckInService) {
     }
 
     // concerns
-    $scope.openModal = function() {
+    $scope.openConcernsModal = function() {
         $('#concernsModal').modal('show');
     }
 
+    $scope.addConcerns = function() {
+        console.log('concernName:', $('#concernName'));
+        $scope.concernName = $('#concernName').val();
+        $scope.concernDescription = $('#concernDescription').val();
+    }
 
     $scope.cancelConcerns = function(){
         $('#concernsModal').modal('hide');
     }
+
+    // needs
+    $scope.openNeedsModal = function() {
+        $('#needsModal').modal('show');
+    }
+
+    $scope.addNeeds = function() {
+        console.log('needName1:', $('#needName1'));
+        console.log('needName2:', $('#needName2'));
+        $scope.needName1 = $('#needName1').val();
+        $scope.needName2 = $('#needName2').val();
+        $scope.needDescription1 = $('#needDescription1').val();    
+        $scope.needDescription2 = $('#needDescription2').val();
+    }
+
+    $scope.cancelNeeds = function(){
+        $('#needsModal').modal('hide');
+    }
+
+    // goals
+    $scope.openGoalsModal = function() {
+        $('#goalsModal').modal('show');
+    }
+
+    $scope.addGoals = function() {
+        console.log('goalName1:', $('#goalName1'));
+        console.log('goalName2:', $('#goalName2'));
+        $scope.goalName1 = $('#goalName1').val();
+        $scope.goalName2 = $('#goalName2').val();
+        $scope.goalDescription1 = $('#goalDescription1').val(); 
+        $scope.goalDescription2 = $('#goalDescription2').val();
+    }
+
+    $scope.cancelGoals = function(){
+        $('#goalsModal').modal('hide');
+    }
+
 });
 
 app.controller('homeController', function($scope, CheckInService) {
