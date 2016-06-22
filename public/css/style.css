@@ -135,7 +135,6 @@ div.block h2, div.checkInBlock h2 {
 	margin-right: 5%;
 	margin-left: 5%;
 	text-align: center;
-	opacity: .9;
 	color: #C7D1DD;
 	box-shadow: 3px 3px 3px #3C3B40;
 	background-color: #3bbbac;
@@ -153,7 +152,6 @@ div.block h2, div.checkInBlock h2 {
 	margin-right: 5%;
 	margin-left: 5%;
 	text-align: center;
-	opacity: .9;
 	color: white;
 	box-shadow: 3px 3px 3px #3C3B40;
 	background-color: #3bbbac;
@@ -166,7 +164,6 @@ div.block h2, div.checkInBlock h2 {
 
 .checkInBox {
 	background-color: #3bbbac;
-	opacity: .9; 
 	color: #C7D1DD;
 }
 
@@ -185,6 +182,16 @@ textarea {
     height: 120px;
 }
 
+/*checkIns Table*/
 
+.tableRow {
+	color: #777777;
+}
+
+/*details*/
+
+.detailsRow {
+	margin-top: 10%;
+}
 
 

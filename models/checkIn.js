@@ -4,14 +4,27 @@ var mongoose = require('mongoose');
 
 
 var checkInSchema = new mongoose.Schema({
-  negativeMood: { type: String, required: true},
   positiveMood: { type: String, required: true},
-  concerns: { type: String, required: true},
-  needs: { type: String, required: true},
-  goals: { type: String, required: true },
-  hopes: { type: String, required: true }, 
-  thanks: { type: String, required: true},
-  date: { type: String }
+  negativeMood: { type: String, required: true},
+  concernName: { type: String, required: true},
+  concernDescription: { type: String, required: true},
+  needName1: { type: String, required: true},
+  needDescription1: { type: String, required: true},
+  needName2: { type: String },
+  needDescription2: { type: String },
+  goalName1: { type: String, required: true },
+  goalDescription1: { type: String, required: true },
+  goalName2: { type: String },
+  goalDescription2: { type: String },
+  hopeName1: { type: String, required: true }, 
+  hopeDescription1: { type: String, required: true }, 
+  hopeName2: { type: String }, 
+  hopeDescription2: { type: String }, 
+  thanksName1: { type: String, required: true },
+  thanksDescription1: { type: String, required: true },
+  thanksName2: { type: String },
+  thanksDescription2: { type: String },
+  date: {type : Date, default : Date.now}
 });
 
 

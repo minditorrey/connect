@@ -22,11 +22,11 @@
 				<i class="fa fa-calendar" aria-hidden="true"></i>
 				<h2>goals</h2>
 			</div>
-			<div class="checkInBlock col-xs-4">
+			<div ng-click="openHopesModal()"class="checkInBlock col-xs-4">
 				<i class="fa fa-heart" aria-hidden="true"></i>
 				<h2>hopes</h2>
 			</div>
-			<div class="checkInBlock col-xs-4">
+			<div ng-click="openThanksModal()"class="checkInBlock col-xs-4">
 				<i class="fa fa-thumbs-up" aria-hidden="true"></i>
 				<h2>thanks</h2>
 	
@@ -214,43 +214,86 @@
 
 <!-- hopes modal -->
 <div class="row">
-    <div class="modal fade" id="goalsModal" tabindex="-1" role="dialog" aria-labelledby="goalsModal" aria-hidden="true">
+    <div class="modal fade" id="hopesModal" tabindex="-1" role="dialog" aria-labelledby="hopesModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title">Share your primary personal and relationship goals for today:</h4>
+                    <h4 class="modal-title">Share one hope for today and one longterm hope:</h4>
                 </div>
 
                 <div class="modal-body">
-                    <label for="goalName1">Personal Goal: </br>
-                    <input id="goalName1" type="text">
+                    <label>Hope for today: </br>
+                    <input id="hopeName1" type="text">
                     </label>
                     </br>
-                    <label class="top" for="goalDescription1">Description: </br>
-                    <textarea id="goalDescription1" type="text"></textarea>
+                    <label class="top">Description: </br>
+                    <textarea id="hopeDescription1" type="text"></textarea>
                     </label></br>
                     <hr>
                 	
-                    <label id="goalBox2">Relationship Goal: </br>
-                    <input id="goalName2" type="text"></br>
+                    <label>Longterm Hope: </br>
+                    <input id="hopeName2" type="text"></br>
                     </label>
                     <label class="top">Description: </br>
-                    <textarea id="goalDescription2" type="text">
+                    <textarea id="hopeDescription2" type="text">
                     </textarea>
                 	</label></br>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addGoals(goals)">Submit</button>
-                    <button type="button" class="btn btn-default green" ng-click="cancelGoals()">Cancel</button>
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addHopes(goals)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelHopes()">Cancel</button>
                 </div>
             </div>
         </div>
     </div>
 </div> <!-- end hopes modal -->
+
+
+<!-- thanks modal -->
+<div class="row">
+    <div class="modal fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="thanksModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Share one specific thing you are thankful for today, and one thing you are thanful for in general</h4>
+                </div>
+
+                <div class="modal-body">
+                    <label>Today, I'm especially thankful for: </br>
+                    <input id="thanksName1" type="text">
+                    </label>
+                    </br>
+                    <label class="top">Explain: </br>
+                    <textarea id="thanksDescription1" type="text"></textarea>
+                    </label></br>
+                    <hr>
+                	
+                    <label>In general, I'm thankful for: </br>
+                    <input id="thanksName2" type="text"></br>
+                    </label>
+                    <label class="top">Explain: </br>
+                    <textarea id="thanksDescription2" type="text">
+                    </textarea>
+                	</label></br>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addThanks(goals)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelThanks()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end thanks modal -->
+
+
 <div class="row bottom">
 	<div class="checkInBox col-xs-8 col-xs-offset-2">
 		<h3>My check-in: </h3>
@@ -262,86 +305,49 @@
 			</div>
 			<div class="col-xs-4 card card-block">
 				<h4 class="card-title checkInComponent">Concerns: </h4>
-				<p class="card-text">{{concernName}}</p>
-				<p class="card-text">{{concernDescription}}</p>
+					<p class="card-text">{{concernName}}</p>
+					<p class="card-text">{{concernDescription}}</p>
 			</div>
 			<div class="col-xs-4 card card-block">
 				<h4 class="card-title checkInComponent">Needs: </h4>
-				<p class="card-text">{{needName1}}</p>
-				<p class="card-text">{{needDescription1}}</p>
-				<p class="card-text">{{needName2}}</p>
-				<p class="card-text">{{needDescription2}}</p>			
+					<p class="card-text">{{needName1}}</p>
+					<p class="card-text">{{needDescription1}}</p>
+					<p class="card-text">{{needName2}}</p>
+					<p class="card-text">{{needDescription2}}</p>			
 			</div>
 		</div>
 		<div class="center row">
 			<div class="card card-block left col-xs-4">
 				<h4 class="card-title checkInComponent">Goals:</h4>
-				<p class="card-text">{{goalName1}}</p>
-				<p class="card-text">{{goalDescription1}}</p>
-				<p class="card-text">{{goalName2}}</p>
-				<p class="card-text">{{goalDescription2}}</p>
+					<p class="card-text">{{goalName1}}</p>
+					<p class="card-text">{{goalDescription1}}</p>
+					<p class="card-text">{{goalName2}}</p>
+					<p class="card-text">{{goalDescription2}}</p>
 			</div>
 			<div class="card card-block left col-xs-4">
 				<h4 class="card-title checkInComponent">Hopes: </h4>
+					<p class="card-text">{{hopeName1}}</p>
+					<p class="card-text">{{hopeDescription1}}</p>
+					<p class="card-text">{{hopeName2}}</p>
+					<p class="card-text">{{hopeDescription2}}</p>
 			</div>
 			<div class="card card-block left col-xs-4">
 				<h4 class="card-title checkInComponent">Thanks: </h4>
+					<p class="card-text">{{thanksName1}}</p>
+					<p class="card-text">{{thanksDescription1}}</p>
+					<p class="card-text">{{thanksName2}}</p>
+					<p class="card-text">{{thanksDescription2}}</p>
 			</div>
 		</div>
-			<div class="row center">
-				<button class="btn btn-default bottom top grayBtn">Complete Check-in</button>
-			</div>
+		<div class="row center">
+			<button ng-click="addCheckIn()" class="btn btn-default bottom top grayBtn">Complete Check-in</button>
+		</div>
 	</div>
 </div>
 	
 
 
-<!-- 		<form ng-model="checkInEdit" ng-hide="checkInForm" ng-submit="saveChanges(CheckInEdit)">
-			<div class="form-group">
-				<label for="">Today's Date: </label>
-				<input ng-model='checkInEdit.date' class="form-control" type="datetime-local" >			
-			</div>			
-			<div class="form-group">
-				<label for="">General Mood: </label>
-				<input ng-model='checkInEdit.mood' class="form-control" type="text" placeholder="happy, content, anxious, angry">			
-			</div>
-			<div class="form-group">
-				<label for="">Things I'm grateful for: </label>
-				<input ng-model='checkInEdit.grateful' class="form-control" type="text" placeholder="puppies, our home, someone who does the finances">
-			</div>
-			<div class="form-group">
-				<label for="">Things I'm concerned about: </label>
-				<input ng-model='checkInEdit.concerns' class="form-control"type="text" placeholder="financial insecurity, stable job">
-			</div>
-			
-			<div class="form-group">
-			<label for="">Things I need: </label>
-			<input ng-model='checkInEdit.needs' class="form-control"type="text" placeholder="emotional support, time off">
-			</div>
 
-			<div class="form-group">
-			<label for="">Goals for today: </label>
-			<input ng-model='checkInEdit.goals' class="form-control"type="text" placeholder="look kindly at myself">
-			</div>
-
-			<div class="form-group">
-			<label for="">Want to communicate something? Share it here: </label>
-			<input ng-model='checkInEdit.share' class="form-control"type="text" placeholder="share things">
-			</div>
-
-			<div class="form-group">
-			<label for="">Want to share an image? Post the url here: </label>
-			<input ng-model='checkInEdit.url' class="form-control"type="text" placeholder="url">
-			</div>
-
-		<button ng-click="addCheckIn(checkInEdit)"class="btn btn-md addCheckIn">Add Check-In</button>
-		<button ng-click='cancelEdit()'class="btn btn-md cancelSave">Cancel Edit</button>
-		<button class="btn btn-md saveForm">Save Edit</button>
-
-		</form> -->
-
-	</div>
-</div>
 
 <div class="row well tableRow">
 	<div class="col-sm-10 col-sm-offset-1">
@@ -354,18 +360,21 @@
 		  <thead>
 		    <tr>
 		      <th></th>
-		      <th></th>
 		      <th>Date</th>
-		      <th>Mood</th>
+		      <th>User</th>
+		      <th>Goal</th>
+		      <th>Need</th>
 
 		    </tr>
 		  </thead>
 		  <tbody>
 		    <tr class="orange" ui-sref="details({id: checkIn._id})" ng-click="getThisCheckIn(checkIn)" ng-repeat="checkIn in checkIns | filter: sortByName">
-		      <td><img class="itemImage img-responsive" ng-src="{{profilePic}}" width="75" alt=""></td>
+		      <td><img class="itemImage img-responsive" ng-src="{{user.customData.profilePic}}" width="75" alt=""></td>
+		      <td>{{checkIn.date | date: "MM/dd/yyyy"}}</td>
 		      <td>{{user.username}}</td>
-		      <td>{{checkIn.date | date: "MM/dd/yyyy 'at' h:mma"}}</td>
-		      <td>{{checkIn.mood}}</td>
+		      <td>{{checkIn.goalName1}}</td>
+		      <td>{{checkIn.needName1}}</td>
+		     
 
 			</tr>
 		  </tbody>

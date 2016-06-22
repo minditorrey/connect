@@ -1,24 +1,47 @@
-
-
-<div class="row tableRow">
-	<div class="col-sm-6 col-sm-offset-3">
-		<div class="well headWell detailsWell">
-			<h5 class="items">Date: <span class="indent">{{checkIn.date | date: "MM/dd/yyyy 'at' h:mma"}}</span></h5> 
-
-			<h5 class="itemInfo green">Current Mood: <span class="indent">{{checkIn.mood}}</span></h5>
-			<h5 class="itemInfo green">Grateful For: <span class="indent">{{checkIn.grateful}}</span></h5>
-			<h5 class="itemInfo green">Concerned About: <span class="indent">{{checkIn.concerns}}</span></h5>
-			<h5 class="itemInfo green">Needs for today: <span class="indent">{{checkIn.needs}}</span></h5>
-			<h5 class="itemInfo expires green">Goals for today: <span class="indent">{{checkIn.goals}}</span></h5>
+<div class="row detailsRow top">
+	<div class="checkInBox col-xs-8 col-xs-offset-2">
+		<h3>{{user.username}} checked in at {{checkIn.date | date: "MM/dd/yyyy"}}</h3>
+		<div class="row">
+			<div class="col-xs-4 card card-block">
+				<h4 class="card-title checkInComponent">Moods: </h4>
+					<p class="card-text">{{checkIn.positiveMood}}</p>
+					<p class="card-text">{{checkIn.negativeMood}}</p>
+			</div>
+			<div class="col-xs-4 card card-block">
+				<h4 class="card-title checkInComponent">Concerns: </h4>
+					<p class="card-text">{{checkIn.concernName}}</p>
+					<p class="card-text">{{checkIn.concernDescription}}</p>
+			</div>
+			<div class="col-xs-4 card card-block">
+				<h4 class="card-title checkInComponent">Needs: </h4>
+					<p class="card-text">{{checkIn.needName1}}</p>
+					<p class="card-text">{{checkIn.needDescription1}}</p>
+					<p class="card-text">{{checkIn.needName2}}</p>
+					<p class="card-text">{{checkIn.needDescription2}}</p>			
+			</div>
+		</div>
+		<div class="center row">
+			<div class="card card-block left col-xs-4">
+				<h4 class="card-title checkInComponent">Goals:</h4>
+					<p class="card-text">{{checkIn.goalName1}}</p>
+					<p class="card-text">{{checkIn.goalDescription1}}</p>
+					<p class="card-text">{{checkIn.goalName2}}</p>
+					<p class="card-text">{{checkIn.goalDescription2}}</p>
+			</div>
+			<div class="card card-block left col-xs-4">
+				<h4 class="card-title checkInComponent">Hopes: </h4>
+					<p class="card-text">{{checkIn.hopeName1}}</p>
+					<p class="card-text">{{checkIn.hopeDescription1}}</p>
+					<p class="card-text">{{checkIn.hopeName2}}</p>
+					<p class="card-text">{{checkIn.hopeDescription2}}</p>
+			</div>
+			<div class="card card-block left col-xs-4 bottom">
+				<h4 class="card-title checkInComponent">Thanks: </h4>
+					<p class="card-text">{{checkIn.thanksName1}}</p>
+					<p class="card-text">{{checkIn.thanksDescription1}}</p>
+					<p class="card-text">{{checkIn.thanksName2}}</p>
+					<p class="card-text">{{checkIn.thanksDescription2}}</p>
+			</div>
 		</div>
 	</div>
-</div> <!-- end well -->
-	
-<div class="row tableRow">
-	<div class="col-sm-6 col-sm-offset-3">
-		<div class="well headWell detailsWell">
-			<img width="250px" ng-src="{{checkIn.url}}" alt="">
-			<h5 class="itemInfo expires green">Share: <span class="indent">{{checkIn.share}}</span></h5>
-		</div>
-	</div>
-</div> 
+</div>

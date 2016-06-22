@@ -109,6 +109,79 @@ app.controller('checkInsController', function($scope, CheckInService) {
         $('#goalsModal').modal('hide');
     }
 
+    // hopes
+    $scope.openHopesModal = function() {
+        $('#hopesModal').modal('show');
+    }
+
+    $scope.addHopes = function() {
+        console.log('hopeName1:', $('#hopeName1'));
+        console.log('hopeName2:', $('#hopeName2'));
+        $scope.hopeName1 = $('#hopeName1').val();
+        $scope.hopeName2 = $('#hopeName2').val();
+        $scope.hopeDescription1 = $('#hopeDescription1').val(); 
+        $scope.hopeDescription2 = $('#hopeDescription2').val();
+    }
+
+    $scope.cancelHopes = function(){
+        $('#hopesModal').modal('hide');
+    }
+
+    // thanks
+    $scope.openThanksModal = function() {
+        $('#thanksModal').modal('show');
+    }
+
+    $scope.addHopes = function() {
+        console.log('thanksName1:', $('#thanksName1'));
+        console.log('thanksName2:', $('#thanksName2'));
+        $scope.thanksName1 = $('#thanksName1').val();
+        $scope.thanksName2 = $('#thanksName2').val();
+        $scope.thanksDescription1 = $('#thanksDescription1').val(); 
+        $scope.thanksDescription2 = $('#thanksDescription2').val();
+    }
+
+    $scope.cancelThanks = function(){
+        $('#thanksModal').modal('hide');
+    }
+
+    $scope.addCheckIn= function() {
+        var checkIn = {
+            positiveMood: $scope.positiveMood,
+            negativeMood: $scope.negativeMood,
+            concernName: $scope.concernName,
+            concernDescription: $scope.concernDescription,
+            needName1: $scope.needName1,
+            needDescription1: $scope.needDescription1,
+            needName2: $scope.needName2,
+            needDescription2: $scope.needDescription2,
+            goalName1: $scope.goalName1,
+            goalDescription1: $scope.goalDescription1,
+            goalName2: $scope.goalDescription1,
+            goalDescription2: $scope.goalDescription2,
+            hopeName1: $scope.hopeName1,
+            hopeDescription1: $scope.hopeDescription1,
+            hopeName2: $scope.hopeName2,
+            hopeDescription2: $scope.hopeDescription2,
+            thanksName1: $scope.thanksName1,
+            thanksDescription1: $scope.thanksDescription1,
+            thanksName2: $scope.thanksName2,
+            thanksDescription2: $scope.thanksDescription2
+        }
+
+        CheckInService.create(checkIn)
+            .then( (checkIn) => {
+                $('#myModal1').modal('hide');
+            });
+        quoteService.addQuote(transaction, $scope.user)
+            .then( (stuff) => {
+              swal({   title: "Thank You!",   text: `Your reference number for this quote is ${stuff.data._id.slice(15)}. Please check your email for your quote details`,
+                    type: "success",  closeOnConfirm: true }
+                    );
+                $('#myModal1').modal('hide');
+            });
+    }
+
 });
 
 app.controller('homeController', function($scope, CheckInService) {
