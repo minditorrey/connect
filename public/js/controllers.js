@@ -172,13 +172,10 @@ app.controller('checkInsController', function($scope, CheckInService) {
         CheckInService.create(checkIn)
             .then( (checkIn) => {
                 $('#myModal1').modal('hide');
-            });
-        quoteService.addQuote(transaction, $scope.user)
-            .then( (stuff) => {
-              swal({   title: "Thank You!",   text: `Your reference number for this quote is ${stuff.data._id.slice(15)}. Please check your email for your quote details`,
-                    type: "success",  closeOnConfirm: true }
+                swal({ title: "Congrats!", text: "You have added your checkin.",
+                    type: "success", closeOnConfirm: true }
                     );
-                $('#myModal1').modal('hide');
+            
             });
     }
 
@@ -274,4 +271,183 @@ app.controller('detailsController', function($scope, $state, $rootScope, $stateP
      
 });
 
+app.controller('situationsController', function($scope, $state, $rootScope, $stateParams, SituationsService) {
+    
+    SituationsService.getAll()
+    .then(res => {
+        $scope.situations = res.data;
+        var situations = $scope.situations;
+        console.log(situations);
+    })
+    .catch(err => {
+        console.log('err:', err);
+    });
+    
+
+    $scope.openEventsModal = function() {
+        $('#eventsModal').modal('show');
+    }
+    
+    $scope.cancelEvent = function(){
+        $('#eventsModal').modal('hide');
+    }
+    
+    $scope.addEvent = function() {
+        console.log('event:', $('#event'));
+        $scope.event= $('#event').val();
+    }
+
+
+    $scope.openThoughtsModal = function() {
+        $('#thoughtsModal').modal('show');
+    }
+    
+    $scope.cancelThoughts = function(){
+        $('#thoughtsModal').modal('hide');
+    }
+    
+    $scope.addThoughts = function() {
+        console.log('thoughts:', $('#thoughts'));
+        $scope.thoughts = $('#thoughts').val();
+    }
+
+
+    $scope.openFeelingsModal = function() {
+        $('#feelingsModal').modal('show');
+    }
+    
+    $scope.cancelFeelings = function(){
+        $('#feelingsModal').modal('hide');
+    }
+    
+    $scope.addFeelings = function() {
+        console.log('feelings:', $('#feelings'));
+        $scope.feelings = $('#feelings').val();
+    }
+
+
+    $scope.openBehaviorsModal = function() {
+        $('#behaviorsModal').modal('show');
+    }
+    
+    $scope.cancelBehaviors = function(){
+        $('#behaviorsModal').modal('hide');
+    }
+    
+    $scope.addBehaviors = function() {
+        console.log('behaviors:', $('#behaviors'));
+        $scope.behaviors = $('#behaviors').val();
+    }
+
+
+    $scope.openBeliefsModal = function() {
+        $('#beliefsModal').modal('show');
+    }
+    
+    $scope.cancelBeliefs = function(){
+        $('#beliefsModal').modal('hide');
+    }
+    
+    $scope.addBeliefs = function() {
+        console.log('beliefs:', $('#beliefs'));
+        $scope.beliefs = $('#beliefs').val();
+    }
+
+
+    $scope.openEffectsModal = function() {
+        $('#effectsModal').modal('show');
+    }
+    
+    $scope.cancelEffects = function(){
+        $('#effectsModal').modal('hide');
+    }
+    
+    $scope.addEffects = function() {
+        console.log('effects:', $('#effects'));
+        $scope.effects = $('#effects').val();
+    }
+
+
+    $scope.openMeaningsModal = function() {
+        $('#meaningsModal').modal('show');
+    }
+    
+    $scope.cancelMeanings = function(){
+        $('#meaningsModal').modal('hide');
+    }
+    
+    $scope.addMeanings = function() {
+        console.log('meanings:', $('#meanings'));
+        $scope.meanings = $('#meanings').val();
+    }
+
+
+    $scope.openPotentialModal = function() {
+        $('#potentialModal').modal('show');
+    }
+    
+    $scope.cancelPotential = function(){
+        $('#potentialModal').modal('hide');
+    }
+    
+    $scope.addPotential = function() {
+        console.log('potential:', $('#potential'));
+        $scope.potential = $('#potential').val();
+    }
+
+
+    $scope.openResolutionModal = function() {
+        $('#resolutionModal').modal('show');
+    }
+    
+    $scope.cancelResolution = function(){
+        $('#resolutionModal').modal('hide');
+    }
+    
+    $scope.addResolution = function() {
+        console.log('resolution:', $('#resolution'));
+        $scope.resolution = $('#resolution').val();
+    }
+
+
+    $scope.addSituation = function() {
+        var situation = {
+            event: $scope.event,
+            thoughts: $scope.thoughts,
+            feelings: $scope.feelings,
+            behaviors: $scope.behaviors,
+            beliefs: $scope.beliefs,
+            effects: $scope.effects,
+            meanings: $scope.meanings,
+            potential: $scope.potential,
+            resolution: $scope.resolution  
+        }
+
+    SituationsService.create(situation)
+        .then((situation) => {
+            $scope.event = "";
+            $scope.thoughts = "";
+            $scope.feelings = "";
+            $scope.behaviors = "";
+            $scope.beliefs = "";
+            $scope.effects = "";
+            $scope.meanings = "";
+            $scope.potential = "";
+            $scope.resolution = "";
+            swal({ title: "Congrats!", text: "You have added your situation.",
+                type: "success", closeOnConfirm: true });       
+        });
+    }
+});
+
+app.controller('situationDetailsController', function($scope, $state, $rootScope, $stateParams, SituationsService) {
+    SituationsService.getThisSituation($stateParams.id)
+    .then(res => {
+        $scope.situation = res.data;
+        console.log('situation:', $scope.situation)
+    })
+    .catch(err => {
+        console.log('err:', err);
+    });
+});
 

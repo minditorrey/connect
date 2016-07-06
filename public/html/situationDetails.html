@@ -1,0 +1,47 @@
+<div class="row detailsRow top">
+	<div class="checkInBox col-xs-8 col-xs-offset-2">
+		<h3>{{situation.event}} shared on {{situation.date | date: "MM/dd/yyyy"}}</h3>
+		<div class="row">
+			<div class="col-xs-4 card card-block">
+				<h4 class="card-title checkInComponent">Event: </h4>
+					<p class="card-text">{{situation.event}}</p>
+			</div>
+			<div class="col-xs-4 card card-block">
+				<h4 class="card-title checkInComponent">Thoughts: </h4>
+					<p class="card-text">{{situation.thoughts}}</p>
+			</div>
+			<div class="col-xs-4 card card-block">
+				<h4 class="card-title checkInComponent">Feelings: </h4>
+					<p class="card-text">{{situation.feelings}}</p>	
+			</div>
+		</div>
+		<div class="row">
+			<div class="card card-block left col-xs-4">
+				<h4 class="card-title checkInComponent">Behaviors:</h4>
+					<p class="card-text">{{situation.behaviors}}</p>
+			</div>
+			<div class="card card-block left col-xs-4">
+				<h4 class="card-title checkInComponent">Beliefs: </h4>
+					<p class="card-text">{{situation.beliefs}}</p>
+			</div>
+			<div class="card card-block left col-xs-4 bottom">
+				<h4 class="card-title checkInComponent">Effects: </h4>
+					<p class="card-text">{{situation.effects}}</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="card card-block left col-xs-4">
+				<h4 class="card-title checkInComponent">Meaning:</h4>
+					<p class="card-text">{{situation.meanings}}</p>
+			</div>
+			<div class="card card-block left col-xs-4">
+				<h4 class="card-title checkInComponent">Potential: </h4>
+					<p class="card-text">{{situation.potential}}</p>
+			</div>
+			<div class="card card-block left col-xs-4 bottom">
+				<h4 class="card-title checkInComponent">Resolution: </h4>
+					<p class="card-text">{{situation.resolution}}</p>
+			</div>
+		</div>
+	</div>
+</div>

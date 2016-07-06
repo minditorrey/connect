@@ -1,0 +1,382 @@
+
+<div class="row situationBlocks">
+
+		<div class="row blocks">
+			<div ng-click="openEventsModal()" class="checkInBlock mood col-sm-4 col-xs-6">
+				<i class="fa fa-heartbeat" aria-hidden="true"></i>
+				<h2>event</h2>
+			</div>
+			<div ng-click="openThoughtsModal()" class="checkInBlock concerns col-sm-4 col-xs-6">
+				<i class="fa fa-question-circle" aria-hidden="true"></i>
+				<h2>thoughts</h2>
+	
+			</div>
+			<div ng-click="openFeelingsModal()" class="checkInBlock needs col-sm-4 col-xs-6">
+				<i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+				<h2>feelings</h2>
+			</div>
+		</div>
+
+		<div class="row blocks">
+			<div ng-click="openBehaviorsModal()" class="checkInBlock mood col-sm-4 col-xs-6">
+				<i class="fa fa-calendar" aria-hidden="true"></i>
+				<h2>behaviors</h2>
+			</div>
+			<div ng-click="openBeliefsModal()"class="checkInBlock col-sm-4 col-xs-6">
+				<i class="fa fa-heart" aria-hidden="true"></i>
+				<h2>beliefs</h2>
+			</div>
+			<div ng-click="openEffectsModal()"class="checkInBlock col-sm-4 col-xs-6">
+				<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+				<h2>effects</h2>
+			</div>
+			<div ng-click="openMeaningsModal()"class="checkInBlock col-sm-4 col-xs-6">
+				<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+				<h2>meaning</h2>
+			</div>
+			<div ng-click="openPotentialModal()"class="checkInBlock col-sm-4 col-xs-6">
+				<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+				<h2>potential</h2>
+			</div>
+			<div ng-click="openResolutionModal()"class="checkInBlock col-sm-4 col-xs-6">
+				<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+				<h2>resolution</h2>
+			</div>
+		</div>
+
+</div>
+
+
+<!-- situations modal -->
+<div class="row">
+    <div class="modal fade" id="eventsModal" tabindex="-1" role="dialog" aria-labelledby="eventsModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Identify a specific situation, event, or issue:</h4>
+                </div>
+
+                <div class="modal-body">
+                    <label>Event: </br>
+                        <textarea id="event" type="text">
+                    </textarea>
+                    </label>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addEvent(event)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelEvent()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end situation modal -->
+
+<!-- thoughts modal -->
+<div class="row">
+    <div class="modal fade" id="thoughtsModal" tabindex="-1" role="dialog" aria-labelledby="thoughtsModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Identify your immediate thoughts about the situation: </h4>
+                </div>
+
+                <div class="modal-body">
+                    <label>Thoughts: </br>
+                        <textarea id="thoughts" type="text">
+                    </textarea>
+                    </label>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addThoughts(thoughts)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelThoughts()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end thoughts modal -->
+
+<!-- feelings modal -->
+<div class="row">
+    <div class="modal fade" id="feelingsModal" tabindex="-1" role="dialog" aria-labelledby="feelingsModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Identify your feelings: </h4>
+                </div>
+
+                <div class="modal-body">
+                    <label>Feelings: </br>
+                        <textarea id="feelings" type="text">
+                    </textarea>
+                    </label>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addFeelings(feelings)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelFeelings()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end feelings modal -->
+
+<!-- behaviors modal -->
+<div class="row">
+    <div class="modal fade" id="behaviorsModal" tabindex="-1" role="dialog" aria-labelledby="behaviorsModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Identify your behaviors in and in response to this situation: </h4>
+                </div>
+
+                <div class="modal-body">
+                    <label>behaviors: </br>
+                        <textarea id="behaviors" type="text">
+                    </textarea>
+                    </label>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addBehaviors(behaviors)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelBehaviors()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end behaviors modal -->
+
+<!-- beliefs modal -->
+<div class="row">
+    <div class="modal fade" id="beliefsModal" tabindex="-1" role="dialog" aria-labelledby="beliefsModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Identify your core beliefs about this situation: </h4>
+                </div>
+
+                <div class="modal-body">
+                    <label>beliefs: </br>
+                        <textarea id="beliefs" type="text">
+                    </textarea>
+                    </label>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addBeliefs(beliefs)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelBeliefs()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end beliefs modal -->
+
+<!-- effects modal -->
+<div class="row">
+    <div class="modal fade" id="effectsModal" tabindex="-1" role="dialog" aria-labelledby="effectsModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Identify the effects of your thoughts, feelings, and behaviors: </h4>
+                </div>
+
+                <div class="modal-body">
+                    <label>effects: </br>
+                        <textarea id="effects" type="text">
+                    </textarea>
+                    </label>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addEffects(effects)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelEffects()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end effects modal -->
+
+<!-- meanings modal -->
+<div class="row">
+    <div class="modal fade" id="meaningsModal" tabindex="-1" role="dialog" aria-labelledby="meaningsModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Identify meaningful thoughts, feelings, and behaviors: </h4>
+                </div>
+
+                <div class="modal-body">
+                    <label>meaningful thoughts: </br>
+                        <textarea id="meanings" type="text">
+                    </textarea>
+                    </label>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addMeanings(meanings)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelMeanings()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end meanings modal -->
+
+<!-- potential modal -->
+<div class="row">
+    <div class="modal fade" id="potentialModal" tabindex="-1" role="dialog" aria-labelledby="potentialModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Identify the <span class="bold">potential</span> effects of <span class="bold">meaningful</span> thoughts, feelings, and behaviors: </h4>
+                </div>
+
+                <div class="modal-body">
+                    <label>potential: </br>
+                        <textarea id="potential" type="text">
+                    </textarea>
+                    </label>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addPotential(potential)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelPotential()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end potential modal -->
+
+
+<!-- resolution modal -->
+<div class="row">
+    <div class="modal fade" id="resolutionModal" tabindex="-1" role="dialog" aria-labelledby="resolutionModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Identify meaningful core beliefs about this situation.</h4>
+                </div>
+
+                <div class="modal-body">
+                    <label>resolution: </br>
+                        <textarea id="resolution" type="text">
+                    </textarea>
+                    </label>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addResolution(resolution)">Submit</button>
+                    <button type="button" class="btn btn-default green" ng-click="cancelResolution()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end resolution modal -->
+
+
+<!-- Add Situation Grid -->
+<div class="row bottom situationGrid">
+	<div class="checkInBox col-xs-8 col-xs-offset-2">
+		<h3>My Situation: </h3>
+		<div class="row">
+			<div class="col-xs-4 card card-block">
+				<h4 class="card-title checkInComponent">Event</h4>
+					<p class="card-text">{{event}}</p>
+			</div>
+			<div class="col-xs-4 card card-block">
+				<h4 class="card-title checkInComponent">Thoughts: </h4>
+					<p class="card-text">{{thoughts}}</p>
+			</div>
+			<div class="col-xs-4 card card-block">
+				<h4 class="card-title checkInComponent">Feelings: </h4>
+					<p class="card-text">{{feelings}}</p>
+			</div>
+		</div>
+		<div class="center row">
+			<div class="card card-block left col-xs-4">
+				<h4 class="card-title checkInComponent">Behaviors:</h4>
+					<p class="card-text">{{behaviors}}</p>
+			</div>
+			<div class="card card-block left col-xs-4">
+				<h4 class="card-title checkInComponent">Beliefs: </h4>
+					<p class="card-text">{{beliefs}}</p>
+			</div>
+			<div class="card card-block left col-xs-4">
+				<h4 class="card-title checkInComponent">Effects: </h4>
+					<p class="card-text">{{effects}}</p>
+			</div>
+		</div>
+		<div class="center row">
+			<div class="card card-block left col-xs-4">
+				<h4 class="card-title checkInComponent">Meaning:</h4>
+					<p class="card-text">{{meanings}}</p>
+			</div>
+			<div class="card card-block left col-xs-4">
+				<h4 class="card-title checkInComponent">Potential: </h4>
+					<p class="card-text">{{potential}}</p>
+			</div>
+			<div class="card card-block left col-xs-4">
+				<h4 class="card-title checkInComponent">Resolution: </h4>
+					<p class="card-text">{{resolution}}</p>
+			</div>
+		</div>
+		<div class="row center">
+			<button ng-click="addSituation()" class="btn btn-default bottom top grayBtn">Share Situation</button>
+		</div>
+	</div>
+</div>
+
+<div class="row well tableRow">
+	<div class="col-sm-10 col-sm-offset-1">
+		<div class="searchBox">
+			<label class="searchBox green" for="search"><span class="glyphicon glyphicon-search"></span> Search Check Ins:</label>
+			<input class = "searchInput" type="text" ng-model="sortByName">
+		</div>
+
+		<table class="table table-striped">
+		  <thead>
+		    <tr>
+		      <th></th>
+		      <th>Date</th>
+		      <th>User</th>
+		      <th>Event</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr class="orange" ui-sref="situationDetails({id: situation._id})" ng-click="getThisSituation(situation)" ng-repeat="situation in situations | filter: sortByName">
+		      <td><img class="itemImage img-responsive" ng-src="{{user.customData.profilePic}}" width="75" alt=""></td>
+		      <td>{{situation.date | date: "MM/dd/yyyy"}}</td>
+		      <td>{{user.username}}</td>
+		      <td>{{situation.event}}</td>
+			</tr>
+		  </tbody>
+		</table>
+	</div>
+</div> <!-- end well -->

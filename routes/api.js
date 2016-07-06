@@ -5,6 +5,6 @@ var path = require('path');
 var router = express.Router();
 
 router.use('/checkIns', require('./checkIns'));
-
+router.use('/situations', require('./situations'));
 
 module.exports = router;

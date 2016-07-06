@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var stormpath = require('express-stormpath');
-var CheckIn= require('../models/checkIn');
+var CheckIn = require('../models/checkIn');
 
 router.get('/', (req, res) => {
   CheckIn.find({}, (err, checkIns) => {

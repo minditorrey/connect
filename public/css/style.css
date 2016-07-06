@@ -53,16 +53,11 @@ label {
 	margin-left: 0;
 }
 
-
-
-}
-
-.navLinks {
-	color: #3bbbac;
+.navbar-nav>li>a.navLinks {
+	color: #4c7cce;
 	font-size: 18px;
-	margin-top: 6%;
-
-
+	margin-top: 2%;
+	font-weight: bold;
 }
 
 .profilePic {
@@ -111,6 +106,10 @@ tr.orange:hover {
 .left {
 	text-align: left;
 }
+
+/*home*/
+
+
 /*blocks*/
 .fa {
 	font-size: 3em;
@@ -119,8 +118,7 @@ tr.orange:hover {
 .blocks {
 	margin-left: 3%;
 	margin-right: 3%;
-
-	
+		
 }
 
 div.block h2, div.checkInBlock h2 {
@@ -135,7 +133,7 @@ div.block h2, div.checkInBlock h2 {
 	margin-right: 5%;
 	margin-left: 5%;
 	text-align: center;
-	color: #C7D1DD;
+	color: white;
 	box-shadow: 3px 3px 3px #3C3B40;
 	background-color: #3bbbac;
 }
@@ -144,13 +142,13 @@ div.block h2, div.checkInBlock h2 {
 /*checkIn*/
 
 .checkInBlock {
-	min-width: 175px;
-	max-width: 200px;
+	min-width: 225px;
+	max-width: 225px;
 	margin-top: 5%;
-	min-height: 100px;
-	max-height: 100px;
-	margin-right: 5%;
-	margin-left: 5%;
+	min-height: 120px;
+	max-height: 120px;
+	margin-right: 7%;
+	margin-left: 7%;
 	text-align: center;
 	color: white;
 	box-shadow: 3px 3px 3px #3C3B40;
@@ -165,6 +163,7 @@ div.block h2, div.checkInBlock h2 {
 .checkInBox {
 	background-color: #3bbbac;
 	color: #C7D1DD;
+	margin-top: 3%;
 }
 
 .checkInComponent {
@@ -194,4 +193,17 @@ textarea {
 	margin-top: 10%;
 }
 
+/*situations*/
 
+.situationBlocks {
+	margin-top: 10%;
+}
+
+.situationGrid {
+	margin-top: 5%;
+}
+
+.bold {
+	font-weight: bold;
+	font-style: italic;
+}

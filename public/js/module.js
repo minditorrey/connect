@@ -31,6 +31,22 @@ app.config(function($stateProvider, $urlRouterProvider) {
 				authenticate: true
 			}
 		})
+		.state('situations', {
+			url: '/situations',
+			templateUrl: '/html/situations.html',
+			controller: 'situationsController',
+			sp: {
+				authenticate: true
+			}
+		})
+		.state('situationDetails', {
+			url: '/situationDetails/:id',
+			templateUrl: '/html/situationDetails.html',
+			controller: 'situationDetailsController',
+			sp: {
+				authenticate: true
+			}
+		})
 		.state('profiles', {
 			url: '/profiles',
 			templateUrl: '/html/profiles.html',

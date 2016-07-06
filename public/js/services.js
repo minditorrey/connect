@@ -35,3 +35,24 @@ app.service('CheckInService', function($http) {
   	}
 
 })
+
+app.service('SituationsService', function($http) {
+  this.getAll = () => {
+    return $http.get('/api/situations');
+  };
+
+  this.create = situation => {
+    return $http.post('/api/situations', situation);
+  }
+
+  this.update = situation => {
+    return $http.put(`/api/situation/${situation._id}`, situation);
+  }
+
+  this.removeSituation = (situation) => {
+    return $http.delete(`/api/situations/${situation._id}`)
+  }
+  this.getThisSituation = (id) => {
+    return $http.get(`/api/situations/${id}`);
+  }
+})
