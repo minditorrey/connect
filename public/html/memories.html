@@ -1,5 +1,5 @@
 <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-<div class="row imageRow">
+<div class="row buttonRow">
 	<button ng-click="openForm()" class="btn grayBtn">Add Image</button>
 </div>
 <div class="row imageRow">
@@ -7,7 +7,7 @@
 		<label><i class="fa fa-picture-o" aria-hidden="true"></i> Image Url:</label>
 		<input class="form-control" ng-model='imageForm.url' placeholder="url"/>
 		<label> <i class="fa fa-clipboard" aria-hidden="true"></i> Description:</label>
-		<input class="form-control" ng-model='imageForm.description' placeholder="Vacation in Antarctica"/>	
+		<input class="form-control" ng-model='imageForm.description' maxlength="60" placeholder="Vacation in Antarctica"/>	
 		<button ng-click="addImage(imageForm)" class="btn grayBtn"> + </button>
 		<button class="btn grayBtn"> Cancel</button>
 	</form>
@@ -15,6 +15,7 @@
 <div class="row imageRow">
 	<div ng-repeat="memory in memories" class="memory col-xs-6 col-sm-3 thumbnail">
 		<img class="memoryImg" ng-src="{{memory.url}}" alt="">
+		<p class="imgBy center">Added by {{user.username}}</p>
 		<p class="imgDesc">{{memory.description}}</p>
 	</div>
 </div>
