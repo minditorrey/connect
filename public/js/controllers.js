@@ -483,6 +483,11 @@ app.controller('memoriesController', function($scope, $state, $stateParams, $roo
             });
     }
 
+    $scope.cancel = () => {
+        $scope.imageForm = "";
+        $scope.hideImages = true;
+    }
+
 });
 
 app.controller('calendarController', function($scope, $state, $stateParams) {
