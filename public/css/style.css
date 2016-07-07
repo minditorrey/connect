@@ -67,8 +67,30 @@ label {
 	font-size: 10px;
 }
 
+.searchIt {
+	font-size: 10px;
+	padding-right: 8%;
+}
+
+.greenBtn {
+	background-color: #3bbbac;
+}
+.searchImages {
+	background-color: #3bbbac;
+	border: 1px gray;
+	margin-top: 3%;
+	padding: 3%;
+	margin-right: 50%;
+	margin-left: 1%;
+}
+.searchInput {
+	height: 40px;
+	width: 100%;
+	color: #EE5754;
+}
+
 .imgDesc {
-	color: #3bbbac;
+	color: #EE5754;
 	margin-top: 2%;
 	padding: 2%;
 	font-size: 16px;
@@ -76,7 +98,7 @@ label {
 
 .thumbnail {
 	padding: 1%;
-	min-height: 325px;
+	min-height: 400px;
 }
 
 .addCheckIn {
