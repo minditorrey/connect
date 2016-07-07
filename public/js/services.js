@@ -34,7 +34,7 @@ app.service('CheckInService', function($http) {
   		return $http.get(`/api/checkIns/${id}`);
   	}
 
-})
+});
 
 
 app.service('SituationsService', function($http) {
@@ -57,3 +57,16 @@ app.service('SituationsService', function($http) {
     return $http.get(`/api/situations/${id}`);
   }
 })
+
+app.service('MemoriesService', function($http) {
+
+  this.getAll = () => {
+    return $http.get('/api/memories');
+  };
+
+  this.create = memory => {
+    return $http.post('/api/memories', memory);
+  }
+
+});
+

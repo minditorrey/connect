@@ -6,5 +6,5 @@ var router = express.Router();
 
 router.use('/checkIns', require('./checkIns'));
 router.use('/situations', require('./situations'));
-
+router.use('/memories', require('./memories'));
 module.exports = router;

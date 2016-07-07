@@ -51,8 +51,22 @@ label {
 	margin-left: 3%;
 }
 
+.imageRow {
+	margin-top: 3%;
+}
+
 .itemImage {
 	border-radius: 20px;
+}
+
+.imgDesc {
+	color: #EE5754;
+	margin-top: 2%;
+	padding: 5%;
+}
+
+.thumbnail {
+	padding: 1%;
 }
 
 .addCheckIn {

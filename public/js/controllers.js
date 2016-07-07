@@ -451,10 +451,37 @@ app.controller('situationDetailsController', function($scope, $state, $rootScope
     });
 });
 
+app.controller('memoriesController', function($scope, $state, $stateParams, $rootScope, MemoriesService) {
+    $scope.hideImages = true;
+    
+    MemoriesService.getAll()
+    .then(res => {
+        $scope.memories = res.data;
+        var memories = $scope.memories;
+        console.log(memories);
+    })
+    .catch(err => {
+        console.log('err:', err);
+    });
 
+    $scope.openForm = function() {
+        $scope.hideImages = false;     
+    }
 
-app.controller('memoriesController', function($scope, $state, $stateParams) {
-
+    $scope.addImage = function(imageForm) {       
+        var memory = {
+            url: $scope.url,
+            description: $scope.description,
+            createdBy: $scope.user.username 
+        }
+        
+        MemoriesService.create($scope.imageForm)
+            .then((memory) => {
+                $scope.imageForm = "";
+                swal({ title: "Congrats!", text: "You have added a new image.",
+                type: "success", closeOnConfirm: true });       
+            });
+    }
 
 });
 
