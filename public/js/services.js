@@ -36,6 +36,7 @@ app.service('CheckInService', function($http) {
 
 })
 
+
 app.service('SituationsService', function($http) {
   this.getAll = () => {
     return $http.get('/api/situations');

@@ -1,0 +1,6 @@
+<section ng-controller="memoriesController as images">
+<div class="spot" ng-repeat="p in pics">
+  <p><a href="http://instagram.com/{{p.user.username}}" target="_blank">{{p.user.username}}</a></p>
+  <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.thumbnail.url}}" /></a>
+</div>
+</section>

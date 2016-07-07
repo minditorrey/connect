@@ -42,7 +42,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		.state('situationDetails', {
 			url: '/situationDetails/:id',
 			templateUrl: '/html/situationDetails.html',
-			controller: 'situationDetailsController',
+			controller: 'situationsController',
 			sp: {
 				authenticate: true
 			}
@@ -59,6 +59,22 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			url: '/details/:id',
 			templateUrl: '/html/details.html',
 			controller: 'detailsController',
+			sp: {
+				authenticate: true
+			}
+		})
+		.state('calendar', {
+			url: '/calendar',
+			templateUrl: '/html/calendar.html',
+			controller: 'calendarController',
+			sp: {
+				authenticate: true
+			}
+		})
+		.state('memories', {
+			url: '/memories',
+			templateUrl: '/html/memories.html',
+			controller: 'memoriesController',
 			sp: {
 				authenticate: true
 			}

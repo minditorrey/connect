@@ -451,3 +451,17 @@ app.controller('situationDetailsController', function($scope, $state, $rootScope
     });
 });
 
+
+
+app.controller('memoriesController', function($scope, $state, $stateParams) {
+
+
+});
+
+app.controller('calendarController', function($scope, $state, $stateParams) {
+
+
+});
+
+
+
