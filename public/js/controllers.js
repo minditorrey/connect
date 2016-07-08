@@ -169,6 +169,8 @@ app.controller('checkInsController', function($scope, $state, $rootScope, $state
             thanksDescription2: $scope.thanksDescription2
         }
 
+        $scope.checkIns.push(checkIn);
+        
         CheckInService.create(checkIn)
             .then( (checkIn) => {
                 $('#myModal1').modal('hide');
@@ -422,6 +424,7 @@ app.controller('situationsController', function($scope, $state, $rootScope, $sta
             potential: $scope.potential,
             resolution: $scope.resolution  
         }
+        $scope.situations.push(situation);
 
     SituationsService.create(situation)
         .then((situation) => {

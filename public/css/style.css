@@ -186,6 +186,10 @@ label {
 	background-color: #C2E8E3;
 }
 
+.navbar-nav>li>a.navLinks:visited {
+	background-color: #C2E8E3;
+}
+
 .profilePic {
 	box-shadow: 3px 3px 3px gray;
 	min-width: 150px;
