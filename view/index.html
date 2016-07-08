@@ -10,12 +10,14 @@
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+  <link rel="stylesheet" href="/bower_components/sweetalert/dist/sweetalert.css">
   <link rel="stylesheet" href="/css/style.css">
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/bower_components/angular/angular.min.js"></script>
   <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
   <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/bower_components/sweetalert/dist/sweetalert.min.js"></script>
   <script src="/bower_components/stormpath-sdk-angularjs/dist/stormpath-sdk-angularjs.min.js"></script>
   <script src="/bower_components/instafeed.js/instafeed.min.js"></script>
   <script src="/bower_components/stormpath-sdk-angularjs/dist/stormpath-sdk-angularjs.tpls.min.js"></script>
@@ -52,6 +54,18 @@
             <li>
               <a class="navLinks" ui-sref='situations'>Situations</a>
             </li>
+            <li>
+              <a class="navLinks" ui-sref='memories'>Memories</a>
+            </li>
+            <li>
+              <a class="navLinks" ui-sref='calendar'>Calendar</a>
+            </li>
+            <li>
+              <a class="navLinks" ui-sref='messages'>Messages</a>
+            </li>
+            <li>
+              <a class="navLinks" ui-sref='reflections'>Reflections</a>
+            </li>
           </ul>
     </div>
 
@@ -60,7 +74,7 @@
     
     <div class="row footerRow">
       <div class="col-xs-4 dashboardRight">
-          <p>&copy 2016 Mindi Torrey</p>
+          <p class="copyright">&copy 2016 Mindi Torrey</p>
       </div>
   
       <div class="col-xs-8 dashboardLeft">
@@ -68,6 +82,10 @@
         <a ui-sref='profiles'>Profile</a>
         <a ui-sref="checkIns">Check-Ins</a>
         <a ui-sref='situations'>Situations</a>
+        <a ui-sref='memories'>Memories</a>
+        <a ui-sref='calendar'>Calendar</a>
+        <a ui-sref='messages'>Messages</a>
+        <a ui-sref='reflections'>Reflections</a>
       </div>
     </div>
   </div> <!-- container-fluid -->

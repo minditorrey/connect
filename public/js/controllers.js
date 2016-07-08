@@ -2,7 +2,7 @@
 
 var app = angular.module('connectApp');
 
-app.controller('checkInsController', function($scope, CheckInService) {
+app.controller('checkInsController', function($scope, $state, $rootScope, $stateParams, CheckInService) {
     console.log('checkInsCtrl!');
 
     CheckInService.getAll()
@@ -132,7 +132,7 @@ app.controller('checkInsController', function($scope, CheckInService) {
         $('#thanksModal').modal('show');
     }
 
-    $scope.addHopes = function() {
+    $scope.addThanks = function() {
         console.log('thanksName1:', $('#thanksName1'));
         console.log('thanksName2:', $('#thanksName2'));
         $scope.thanksName1 = $('#thanksName1').val();
@@ -444,6 +444,7 @@ app.controller('situationDetailsController', function($scope, $state, $rootScope
     SituationsService.getThisSituation($stateParams.id)
     .then(res => {
         $scope.situation = res.data;
+        console.log(res.data);
         console.log('situation:', $scope.situation)
     })
     .catch(err => {

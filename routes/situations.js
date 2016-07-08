@@ -17,6 +17,12 @@ router.post('/', (req, res) => {
 });
 
 router.route('/:id')
+  .get((req, res) => {
+    Situation.findById(req.params.id, function (err, situation) {
+    res.status(err ? 400 : 200).send(err || situation);
+    console.log('situation:', situation);
+    })
+  })
   .put((req, res) => {
     Situation.findByIdAndUpdate(req.params.id, { $set: req.body }, (err, situation) => {
       res.status(err ? 400 : 200).send(err || situation);
@@ -27,14 +33,9 @@ router.route('/:id')
     Situation.findByIdAndRemove(req.params.id, (err, situation) => {
       res.status(err ? 400 : 200).send(err);
     })
-
   })
 
-  .get((req, res) => {
-    Situation.findById(req.params.id, function (err, situation) {
-    res.status(err ? 400 : 200).send(err || situation);
-    console.log('situation:', situation);
-  });
-});
+
+
 
 module.exports = router;

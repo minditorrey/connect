@@ -10,8 +10,21 @@ body {
 }
 
 
+
+@media only screen and (max-width: 1200px) {
+    body { font-size: 99%;}
+}
+
+@media only screen and (max-width: 800px) {
+    body { font-size: 92%;}
+}
+
+@media only screen and (max-width: 400px) {
+    body { font-size: 75%;}
+}
+
 h1 {
-	font-size: 56px;
+	font-size: 2.5em;
 }
 
 h3 {
@@ -23,51 +36,56 @@ h4 {
 }
 
 h5 {
-	font-size: 18px;
+	font-size: 1.3em;
 	color: #DEDEDE;
 }
 
 h6 {
-	font-size: 16px;
+	font-size: 1.2em;
 	color: #3bbbac;
 }
 
 .dashboardLeft {
 	background-color: #D93240;
-
 	margin-top: 3%;
-	padding-top: 3%;
-	padding-bottom: 4%;
+	padding-top: 2%;
+	padding-bottom: 3%;
 	height: 125px;
 }
 
 .dashboardLeft h1 {
-	margin-top: 0;
+	margin-top: 2%;
+	margin-bottom: 1%;
 }
 
 .dashboardRight {
-
 	margin-top: 3%;
+	font-size: 1.4em;
 	background-color: #638CA6;
-	padding-top: 3%;
-	padding-bottom: 4%;
+	padding-top: 2%;
+	padding-bottom: 3%;
 	height: 125px;
+	line-height: 1em;
 }
 
 .dashboardRight p {
 	margin-top: 1%;
+	margin-bottom: 1%;
 }
 
+.copyright {
+	font-size: .9em;
+}
 .dashboardLeft a {
 	color: white;
-	margin-right: 5%;
+	margin-right: 3%;
 }
 
 .dashboardLeft a:hover {
 	text-decoration: none;
 	color: white;
 	margin-right: 5%;
-	font-size: 24px;
+	font-size: 1.4em;
 }
 
 .footerRow {
@@ -157,6 +175,15 @@ label {
 	font-size: 18px;
 	margin-top: 2%;
 	font-weight: bold;
+	line-height: .8em;
+}
+
+.navbar-nav>li>a.navLinks:hover {
+	color: #D93240;
+	font-size: 1.5em;
+	margin-top: 2%;
+	font-weight: bold;
+	background-color: #C2E8E3;
 }
 
 .profilePic {
@@ -245,6 +272,7 @@ div.block h2, div.checkInBlock h2 {
 	color: white;
 	box-shadow: 3px 3px 3px #3C3B40;
 	background-color: #3bbbac;
+	font-size: 1.3em;
 }
 
 

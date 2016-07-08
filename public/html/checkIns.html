@@ -1,9 +1,9 @@
 <div class="row">
-    <div class="col-xs-3 dashboardLeft">
+    <div class="col-xs-4 dashboardLeft">
         <h1>Check-Ins</h1>
     </div>
 
-    <div class="col-xs-9 dashboardRight">
+    <div class="col-xs-8 dashboardRight">
         <p>Share a daily check-in for transparent emotional communication.</br>Fill in all six fields, then complete your check-in to share with your loved one.</p>
     </div>
 </div>
@@ -202,10 +202,10 @@
                     </label></br>
                     <hr>
                 	
-                    <label id="goalBox2">Relationship Goal: </br>
+                    <label for="goalName2" id="goalBox2">Relationship Goal: </br>
                     <input id="goalName2" type="text"></br>
                     </label>
-                    <label class="top">Description: </br>
+                    <label for="goalDescription2" class="top">Description: </br>
                     <textarea id="goalDescription2" type="text">
                     </textarea>
                 	</label></br>
@@ -234,26 +234,26 @@
                 </div>
 
                 <div class="modal-body">
-                    <label>Hope for today: </br>
+                    <label for="hopeName1">Hope for today: </br>
                     <input id="hopeName1" type="text">
                     </label>
                     </br>
-                    <label class="top">Description: </br>
+                    <label for="hopeDescription1" class="top">Description: </br>
                     <textarea id="hopeDescription1" type="text"></textarea>
                     </label></br>
                     <hr>
                 	
-                    <label>Longterm Hope: </br>
+                    <label for="hopeName2">Longterm Hope: </br>
                     <input id="hopeName2" type="text"></br>
                     </label>
-                    <label class="top">Description: </br>
+                    <label for="hopeDescription2"class="top">Description: </br>
                     <textarea id="hopeDescription2" type="text">
                     </textarea>
                 	</label></br>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addHopes(goals)">Submit</button>
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addHopes(hopes)">Submit</button>
                     <button type="button" class="btn btn-default green" ng-click="cancelHopes()">Cancel</button>
                 </div>
             </div>
@@ -294,7 +294,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addThanks(goals)">Submit</button>
+                    <button type="button" class="btn btn-secondary green" data-dismiss="modal" ng-click="addThanks(thanks)">Submit</button>
                     <button type="button" class="btn btn-default green" ng-click="cancelThanks()">Cancel</button>
                 </div>
             </div>
