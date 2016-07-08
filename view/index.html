@@ -7,6 +7,7 @@
   <title>Linkd</title>
   <!-- <link rel="stylesheet" href="/bower_components/sweetalert/dist/sweetalert.css"> -->
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
   <link rel="stylesheet" href="/css/style.css">
@@ -46,14 +47,29 @@
               <a class="navLinks" ui-sref='profiles'>Profile</a>        
             </li>
             <li>
-              <a class="navLinks" ui-sref='checkIns'>Check Ins</a>
+              <a class="navLinks" ui-sref='checkIns'>Check-Ins</a>
+            </li>       
+            <li>
+              <a class="navLinks" ui-sref='situations'>Situations</a>
             </li>
           </ul>
     </div>
 
 
         <ui-view></ui-view>
-
+    
+    <div class="row footerRow">
+      <div class="col-xs-4 dashboardRight">
+          <p>&copy 2016 Mindi Torrey</p>
+      </div>
+  
+      <div class="col-xs-8 dashboardLeft">
+        <a ui-sref='home'>Home</a>
+        <a ui-sref='profiles'>Profile</a>
+        <a ui-sref="checkIns">Check-Ins</a>
+        <a ui-sref='situations'>Situations</a>
+      </div>
+    </div>
   </div> <!-- container-fluid -->
 </body>
 </html>

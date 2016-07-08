@@ -4,8 +4,14 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;*/
-	background-color: #C6E2EE;
+	background-color: #c2e8e3;
 	color: white;
+	font-family: 'Quicksand', sans-serif;
+}
+
+
+h1 {
+	font-size: 56px;
 }
 
 h3 {
@@ -26,9 +32,50 @@ h6 {
 	color: #3bbbac;
 }
 
+.dashboardLeft {
+	background-color: #D93240;
+
+	margin-top: 3%;
+	padding-top: 3%;
+	padding-bottom: 4%;
+	height: 125px;
+}
+
+.dashboardLeft h1 {
+	margin-top: 0;
+}
+
+.dashboardRight {
+
+	margin-top: 3%;
+	background-color: #638CA6;
+	padding-top: 3%;
+	padding-bottom: 4%;
+	height: 125px;
+}
+
+.dashboardRight p {
+	margin-top: 1%;
+}
+
+.dashboardLeft a {
+	color: white;
+	margin-right: 5%;
+}
+
+.dashboardLeft a:hover {
+	text-decoration: none;
+	color: white;
+	margin-right: 5%;
+	font-size: 24px;
+}
+
+.footerRow {
+	margin-top: 5%;
+}
 .grayBtn {
 	color: white;
-	background-color: #EE5754;
+	background-color: #D93240;
 }
 
 .greeting {
@@ -63,7 +110,7 @@ label {
 }
 
 .imgBy {
-	color: #EE5754;
+	color: #D93240;
 	font-size: 10px;
 }
 
@@ -86,11 +133,11 @@ label {
 .searchInput {
 	height: 40px;
 	width: 100%;
-	color: #EE5754;
+	color: #D93240;
 }
 
 .imgDesc {
-	color: #EE5754;
+	color: #D93240;
 	margin-top: 2%;
 	padding: 2%;
 	font-size: 16px;
@@ -106,7 +153,7 @@ label {
 }
 
 .navbar-nav>li>a.navLinks {
-	color: #EE5754;
+	color: #D93240;
 	font-size: 18px;
 	margin-top: 2%;
 	font-weight: bold;
@@ -218,7 +265,7 @@ div.block h2, div.checkInBlock h2 {
 }
 
 .checkInRow {
-	margin-top: 4%;
+	margin-top: 2%;
 	margin-bottom: 5%;
 }
 
