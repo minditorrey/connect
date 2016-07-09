@@ -373,7 +373,7 @@
 		    </tr>
 		  </thead>
 		  <tbody>
-		    <tr class="orange" ui-sref="situationDetails({id: situation._id})" ng-click="getThisSituation(situation)" ng-repeat="situation in situations | filter: sortByName">
+		    <tr class="orange" ui-sref="situationDetails({id: situation._id})" ng-click="getThisSituation(situation)" ng-repeat="situation in situations | filter: sortByName | orderBy: 'created_at':true | limitTo: quantity">
 		      <td><img class="itemImage img-responsive" ng-src="{{user.customData.profilePic}}" width="75" alt=""></td>
 		      <td>{{situation.date | date: "MM/dd/yyyy"}}</td>
 		      <td>{{user.username}}</td>

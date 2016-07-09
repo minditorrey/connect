@@ -45,12 +45,30 @@ h6 {
 	color: #3bbbac;
 }
 
+.radioForm input {
+	float: left;
+	margin-left: 15px;
+}
+.radioLabel {
+	float: left;
+	margin-left: 15px;
+}
+
+.quantityBox .radioForm {
+	float: right;
+
+}
 .dashboardLeft {
+	text-align: center;
 	background-color: #D93240;
 	margin-top: 3%;
 	padding-top: 2%;
 	padding-bottom: 3%;
 	height: 125px;
+	display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
 }
 
 .dashboardLeft h1 {
@@ -63,9 +81,13 @@ h6 {
 	font-size: 1.4em;
 	background-color: #638CA6;
 	padding-top: 2%;
-	padding-bottom: 3%;
+	padding-bottom: 2%;
 	height: 125px;
-	line-height: 1em;
+	line-height: 1.1em;
+	display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
 }
 
 .dashboardRight p {
@@ -219,7 +241,7 @@ label {
 }
 
 tr.orange:hover { 
-    color: #3bbbac;
+    color: #D93240;
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
@@ -326,6 +348,9 @@ textarea {
 
 .tableRow {
 	color: #777777;
+}
+.table-striped {
+	margin-top: 10%;
 }
 
 /*details*/

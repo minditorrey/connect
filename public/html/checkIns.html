@@ -11,31 +11,31 @@
 <div class="row checkInRow">
 
 		<div class="row blocks">
-			<div ng-click="openMoodModal()" class="checkInBlock mood col-sm-4 col-xs-6">
+			<div ng-click="openMoodModal()" class="checkInBlock mood col-md-4 col-sm-6 col-xs-12">
 				<i class="fa fa-heartbeat" aria-hidden="true"></i>
 				<h2>mood</h2>
 			</div>
-			<div ng-click="openConcernsModal()" class="checkInBlock concerns col-sm-4 col-xs-6">
+			<div ng-click="openConcernsModal()" class="checkInBlock concerns col-md-4 col-sm-6 col-xs-12">
 				<i class="fa fa-question-circle" aria-hidden="true"></i>
 				<h2>concerns</h2>
 	
 			</div>
-			<div ng-click="openNeedsModal()" class="checkInBlock needs col-sm-4 col-xs-6">
+			<div ng-click="openNeedsModal()" class="checkInBlock needs col-md-4 col-sm-6 col-xs-12">
 				<i class="fa fa-hand-paper-o" aria-hidden="true"></i>
 				<h2>needs</h2>
 			</div>
 		</div>
 
 		<div class="row blocks">
-			<div ng-click="openGoalsModal()" class="checkInBlock mood col-sm-4 col-xs-6">
+			<div ng-click="openGoalsModal()" class="checkInBlock mood col-md-4 col-sm-6 col-xs-12">
 				<i class="fa fa-calendar" aria-hidden="true"></i>
 				<h2>goals</h2>
 			</div>
-			<div ng-click="openHopesModal()"class="checkInBlock col-sm-4 col-xs-6">
+			<div ng-click="openHopesModal()"class="checkInBlock col-md-4 col-sm-6 col-xs-12">
 				<i class="fa fa-heart" aria-hidden="true"></i>
 				<h2>hopes</h2>
 			</div>
-			<div ng-click="openThanksModal()"class="checkInBlock col-sm-4 col-xs-6">
+			<div ng-click="openThanksModal()"class="checkInBlock col-md-4 col-sm-6 col-xs-12">
 				<i class="fa fa-thumbs-up" aria-hidden="true"></i>
 				<h2>thanks</h2>
 	
@@ -354,10 +354,24 @@
 
 <div class="row well tableRow">
 	<div class="col-sm-10 col-sm-offset-1">
-		<div class="searchBox">
-			<label class="searchBox green" for="search"><span class="glyphicon glyphicon-search"></span> Search Check Ins:</label>
+		<div class="col-sm-4 searchBox">
+			<label class="searchBox" for="search"><span class="glyphicon glyphicon-search"></span> Search Check Ins:</label>
 			<input class = "searchInput" type="text" ng-model="sortByName">
 		</div>
+
+        <div class="col-sm-8 quantityBox">
+            <div class="radioForm">
+                <p>Show:</p> 
+                <label class="radioLabel" for="quantity"> 5</label>
+                <input class="radioInput" type="radio" ng-model="quantity" value="5"> 
+
+                <label class="radioLabel" for="quantity">20</label>
+                <input class="radioInput" type="radio" ng-model="quantity" value="20">
+
+                <label class="radioLabel" for="quantity">all</label>
+                <input class="radioInput" type="radio" ng-model="quantity" value="all">
+            </div>
+        </div>
 
 		<table class="table table-striped">
 		  <thead>
@@ -371,7 +385,7 @@
 		    </tr>
 		  </thead>
 		  <tbody>
-		    <tr class="orange" ui-sref="details({id: checkIn._id})" ng-click="getThisCheckIn(checkIn)" ng-repeat="checkIn in checkIns | filter: sortByName">
+		    <tr class="orange" ui-sref="details({id: checkIn._id})" ng-click="getThisCheckIn(checkIn)" ng-repeat="checkIn in checkIns | filter: sortByName | orderBy: 'created_at':true | limitTo: quantity">
 		      <td><img class="itemImage img-responsive" ng-src="{{user.customData.profilePic}}" width="75" alt=""></td>
 		      <td>{{checkIn.date | date: "MM/dd/yyyy"}}</td>
 		      <td>{{user.username}}</td>

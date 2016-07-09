@@ -5,6 +5,8 @@ var app = angular.module('connectApp');
 app.controller('checkInsController', function($scope, $state, $rootScope, $stateParams, CheckInService) {
     console.log('checkInsCtrl!');
 
+    $scope.quantity = 5;
+    
     CheckInService.getAll()
     .then(res => {
         $scope.checkIns = res.data;
@@ -274,7 +276,7 @@ app.controller('detailsController', function($scope, $state, $rootScope, $stateP
 });
 
 app.controller('situationsController', function($scope, $state, $rootScope, $stateParams, SituationsService) {
-    
+    $scope.quantity = 5;
     SituationsService.getAll()
     .then(res => {
         $scope.situations = res.data;
