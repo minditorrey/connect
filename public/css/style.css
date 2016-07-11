@@ -112,6 +112,29 @@ h6 {
 	margin-right: 3%;
 }
 
+.panel {
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+.messageWell {
+	margin-top: 5%;
+	color: #d93240;
+}
+
+.messageWell h6{
+	color: #d93240;
+	font-size: 1.2em;
+}
+.messageWell h5 {
+	color: #d93240;
+	font-size: 1.5em;
+}
+
+#messages {
+	color: black;
+}
+
 .dashboardLeftFoot a:hover {
 	text-decoration: none;
 	color: #3BBBAC;

@@ -516,28 +516,42 @@ app.controller('calendarController', function($scope, $state, $stateParams) {
 
 });
 
-app.controller('messagesController', function($scope, $state, $rootScope, $location, Pubnub, $stateParams, MessagesService) {
-    $scope.data = {
-        username: 'User_' + Math.floor(Math.random() * 1000)
-    }
+app.controller('messagesController', function($scope, $state, $rootScope, $location, $stateParams, MessageService) {
+    
+    MessageService.getAll()
+    .then(res => {
+        $scope.messages = res.data;
+        var messages = $scope.messages;
+        console.log('messages:', messages);
+    })
+    .catch(err => {
+        console.log('err:', err);
+    });
 
-    $scope.join = function() {
-        console.log('Joining');
-        var _ref, _ref1;
-        $rootScope.data || ($rootScope.data = {});
-        $rootScope.data.username = (_ref = $scope.data) != null ? _ref.username : void 0;
-        $rootScope.data.city = (_ref1 = $scope.data) != null ? _ref1.city : void 0;
-        $rootScope.data.uuid = Math.floor(Math.random() * 1000000) + '__' + $scope.data.username;
-        console.log($rootScope);
 
-        Pubnub.init ({
-            subscribe_key: 'sub-c-93f0a9ae-45ff-11e6-82fe-0619f8945a4f',
-            publish_key: 'pub-c-0a6a427b-aedb-447b-84f0-0a4c17f2bcad',
-            uuid: $rootScope.data.uuid
-        });
+    // (function(){
+    
+    // var input = PUBNUB.$('input');
+    // var button = PUBNUB.$('button');
+    // var output = PUBNUB.$('output');
 
-        return $location.path('/messages');
-    }
+    // PUBNUB.subscribe({
+    //     channel: 'simple-chat',
+    //     callback: function(message) {
+    //         output.innerHTML = $scope.user.username + ': ' + message +'<br>' + output.innerHTML
+    //     }
+    // })
+
+    // PUBNUB.bind( 'mousedown, touchstart', button, function() {
+    //     PUBNUB.publish({
+    //         channel: 'simple-chat',
+    //         message: input.value
+    //     })
+    //     input.value = "";
+    // })  
+    // })();
+
+
 
 });
 

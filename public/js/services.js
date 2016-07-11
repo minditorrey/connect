@@ -70,8 +70,11 @@ app.service('MemoriesService', function($http) {
 
 });
 
-app.service('MessagesService', function($http) {
+app.service('MessageService', function($http) {
 
+  this.getAll = () => {
+    return $http.get('/api/messages');
+  };
 });
 
 

@@ -1,4 +1,4 @@
-var app = angular.module('connectApp', ['ui.router', 'stormpath', 'stormpath.templates', 'pubnub.angular.service']);
+var app = angular.module('connectApp', ['ui.router', 'stormpath', 'stormpath.templates']);
 
 app.run(function($stormpath){
   $stormpath.uiRouter({
@@ -6,6 +6,7 @@ app.run(function($stormpath){
     defaultPostLoginState: 'home'
   });
 });
+
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
