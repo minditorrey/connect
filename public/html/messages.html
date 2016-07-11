@@ -7,10 +7,12 @@
 				<button id="button">Post</button>
 			</div>
 	
-			<div class="well messageWell">	
-				<div ng-repeat="message in messages" id="output">
-					<h5>{{message.username}}: {{message.post}}</h5>
-					<h6>{{message.date | date:'medium' }}</h6>
+			<div>	
+				<div class="well messageWell" ng-repeat="message in messages" id="output">
+						<img class="postImg" width="60" ng-src="{{profilePic}}" alt="">
+						<h5>{{message.username}}: {{message.post}}</h5>
+						<h6>{{message.date | date:'medium' }}</h6>
+
 				</div>
 			</div>
 

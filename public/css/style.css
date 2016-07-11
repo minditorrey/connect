@@ -112,6 +112,11 @@ h6 {
 	margin-right: 3%;
 }
 
+.postImg {
+	float: left;
+	clear: both;
+	margin-right: 2%;
+}
 .panel {
 	margin-top: 10%;
 	margin-bottom: 10%;
