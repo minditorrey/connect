@@ -71,6 +71,15 @@ h6 {
     flex-direction:column;
 }
 
+.dashboardLeftFoot {
+	text-align: center;
+	background-color: #D93240;
+	margin-top: 3%;
+	padding-top: 2%;
+	padding-bottom: 3%;
+	height: 125px;	
+}
+
 .dashboardLeft h1 {
 	margin-top: 2%;
 	margin-bottom: 1%;
@@ -98,16 +107,14 @@ h6 {
 .copyright {
 	font-size: .9em;
 }
-.dashboardLeft a {
+.dashboardLeftFoot a {
 	color: white;
 	margin-right: 3%;
 }
 
-.dashboardLeft a:hover {
+.dashboardLeftFoot a:hover {
 	text-decoration: none;
-	color: white;
-	margin-right: 5%;
-	font-size: 1.4em;
+	color: #3BBBAC;
 }
 
 .footerRow {

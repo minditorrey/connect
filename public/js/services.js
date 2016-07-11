@@ -70,3 +70,9 @@ app.service('MemoriesService', function($http) {
 
 });
 
+app.service('MessagesService', function($http) {
+
+});
+
+
+

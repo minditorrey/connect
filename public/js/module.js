@@ -1,4 +1,4 @@
-var app = angular.module('connectApp', ['ui.router', 'stormpath', 'stormpath.templates']);
+var app = angular.module('connectApp', ['ui.router', 'stormpath', 'stormpath.templates', 'pubnub.angular.service']);
 
 app.run(function($stormpath){
   $stormpath.uiRouter({
@@ -75,6 +75,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			url: '/memories',
 			templateUrl: '/html/memories.html',
 			controller: 'memoriesController',
+			sp: {
+				authenticate: true
+			}
+		})
+		.state('messages', {
+			url: '/messages',
+			templateUrl: '/html/messages.html',
+			controller: 'messagesController',
 			sp: {
 				authenticate: true
 			}

@@ -6,7 +6,7 @@ app.controller('checkInsController', function($scope, $state, $rootScope, $state
     console.log('checkInsCtrl!');
 
     $scope.quantity = 5;
-    
+
     CheckInService.getAll()
     .then(res => {
         $scope.checkIns = res.data;
@@ -53,22 +53,26 @@ app.controller('checkInsController', function($scope, $state, $rootScope, $state
         } else if($('#calm').is(':checked')) {
             $scope.positiveMood = "calm";
         }
-       
+
+        $('#concernsModal').modal('show');
     }
+    
+        $scope.openConcernsModal = function() {
+            $('#concernsModal').modal('show');
+        }
 
     $scope.cancelMood = function(){
         $('#moodModal').modal('hide');
     }
 
     // concerns
-    $scope.openConcernsModal = function() {
-        $('#concernsModal').modal('show');
-    }
+
 
     $scope.addConcerns = function() {
         console.log('concernName:', $('#concernName'));
         $scope.concernName = $('#concernName').val();
         $scope.concernDescription = $('#concernDescription').val();
+        $('#needsModal').modal('show');
     }
 
     $scope.cancelConcerns = function(){
@@ -87,6 +91,7 @@ app.controller('checkInsController', function($scope, $state, $rootScope, $state
         $scope.needName2 = $('#needName2').val();
         $scope.needDescription1 = $('#needDescription1').val();    
         $scope.needDescription2 = $('#needDescription2').val();
+        $('#goalsModal').modal('show');
     }
 
     $scope.cancelNeeds = function(){
@@ -105,6 +110,7 @@ app.controller('checkInsController', function($scope, $state, $rootScope, $state
         $scope.goalName2 = $('#goalName2').val();
         $scope.goalDescription1 = $('#goalDescription1').val(); 
         $scope.goalDescription2 = $('#goalDescription2').val();
+        $('#hopesModal').modal('show');
     }
 
     $scope.cancelGoals = function(){
@@ -123,6 +129,7 @@ app.controller('checkInsController', function($scope, $state, $rootScope, $state
         $scope.hopeName2 = $('#hopeName2').val();
         $scope.hopeDescription1 = $('#hopeDescription1').val(); 
         $scope.hopeDescription2 = $('#hopeDescription2').val();
+        $('#thanksModal').modal('show');
     }
 
     $scope.cancelHopes = function(){
@@ -299,6 +306,7 @@ app.controller('situationsController', function($scope, $state, $rootScope, $sta
     $scope.addEvent = function() {
         console.log('event:', $('#event'));
         $scope.event= $('#event').val();
+        $('#thoughtsModal').modal('show');
     }
 
 
@@ -313,6 +321,7 @@ app.controller('situationsController', function($scope, $state, $rootScope, $sta
     $scope.addThoughts = function() {
         console.log('thoughts:', $('#thoughts'));
         $scope.thoughts = $('#thoughts').val();
+        $('#feelingsModal').modal('show');
     }
 
 
@@ -327,6 +336,7 @@ app.controller('situationsController', function($scope, $state, $rootScope, $sta
     $scope.addFeelings = function() {
         console.log('feelings:', $('#feelings'));
         $scope.feelings = $('#feelings').val();
+        $('#behaviorsModal').modal('show');
     }
 
 
@@ -341,6 +351,7 @@ app.controller('situationsController', function($scope, $state, $rootScope, $sta
     $scope.addBehaviors = function() {
         console.log('behaviors:', $('#behaviors'));
         $scope.behaviors = $('#behaviors').val();
+        $('#beliefsModal').modal('show');
     }
 
 
@@ -355,6 +366,7 @@ app.controller('situationsController', function($scope, $state, $rootScope, $sta
     $scope.addBeliefs = function() {
         console.log('beliefs:', $('#beliefs'));
         $scope.beliefs = $('#beliefs').val();
+        $('#effectsModal').modal('show');
     }
 
 
@@ -369,6 +381,7 @@ app.controller('situationsController', function($scope, $state, $rootScope, $sta
     $scope.addEffects = function() {
         console.log('effects:', $('#effects'));
         $scope.effects = $('#effects').val();
+        $('#meaningsModal').modal('show');
     }
 
 
@@ -383,6 +396,7 @@ app.controller('situationsController', function($scope, $state, $rootScope, $sta
     $scope.addMeanings = function() {
         console.log('meanings:', $('#meanings'));
         $scope.meanings = $('#meanings').val();
+        $('#potentialModal').modal('show');
     }
 
 
@@ -397,6 +411,7 @@ app.controller('situationsController', function($scope, $state, $rootScope, $sta
     $scope.addPotential = function() {
         console.log('potential:', $('#potential'));
         $scope.potential = $('#potential').val();
+        $('#resolutionModal').modal('show');
     }
 
 
@@ -497,6 +512,11 @@ app.controller('memoriesController', function($scope, $state, $stateParams, $roo
 });
 
 app.controller('calendarController', function($scope, $state, $stateParams) {
+
+
+});
+
+app.controller('messagesController', function($scope, $state, $stateParams, MessagesService) {
 
 
 });

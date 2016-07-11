@@ -358,10 +358,23 @@
 
 <div class="row well tableRow">
 	<div class="col-sm-10 col-sm-offset-1">
-		<div class="searchBox">
-			<label class="searchBox green" for="search"><span class="glyphicon glyphicon-search"></span> Search Check Ins:</label>
+		<div class="searchBox col-sm-4">
+			<label class="searchBox" for="search"><span class="glyphicon glyphicon-search"></span> Search Situations:</label>
 			<input class = "searchInput" type="text" ng-model="sortByName">
 		</div>
+        <div class="col-sm-8 quantityBox">
+            <div class="radioForm">
+                <p>Show:</p> 
+                <label class="radioLabel" for="quantity"> 5</label>
+                <input class="radioInput" type="radio" ng-model="quantity" value="5"> 
+
+                <label class="radioLabel" for="quantity">20</label>
+                <input class="radioInput" type="radio" ng-model="quantity" value="20">
+
+                <label class="radioLabel" for="quantity">all</label>
+                <input class="radioInput" type="radio" ng-model="quantity" value="all">
+            </div>
+        </div>
 
 		<table class="table table-striped">
 		  <thead>
