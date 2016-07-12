@@ -1,11 +1,43 @@
+<div class="row">
+    <div class="col-xs-4 dashboardLeft">
+        <h1>Messages</h1>
+    </div>
+
+    <div class="col-xs-8 dashboardRight">
+        <p>A place to talk about the important things.</p>
+        <p>Search Messages by any term.</p>
+    </div>
+</div>
+
+<div class="col-xs-8 col-xs-offset-2">
+	<div class="row messageSearchRow">
+		<div class="col-sm-4 searchBox">
+			<label class="searchBox" for="search"><span class="glyphicon glyphicon-search"></span> Search messages:</label>
+			<input class = "searchInput" type="text" ng-model="sortByName">
+		</div>
+       	<div class="col-sm-8 quantityBox">
+          		<div class="radioForm">
+              		<p>Show:</p> 
+              		<label class="radioLabel" for="quantity"> 5</label>
+              		<input class="radioInput" type="radio" ng-model="quantity" value="5">
+              		<label class="radioLabel" for="quantity">20</label>
+              		<input class="radioInput" type="radio" ng-model="quantity" value="20">
+              		<label class="radioLabel" for="quantity">all</label>
+              		<input class="radioInput" type="radio" ng-model="quantity" value="all">
+          		</div>
+       	</div>
+	</div> <!-- End row -->
+</div>
 
 	<div class="col-xs-8 col-xs-offset-2 panel panel-default">
 	  	<div class="panel-body">
-				
-			<div id="messages">
-				<input ng-model="message.post" id="input" placeholder="type message here."/>
-				<button class="btn green" ng-click="addMessage()" id="postBtn">Post</button>
-			</div>
+			<div class="row">
+				<div id="messages">
+					<input ng-model="message.post" id="input" placeholder="type message here."/>
+					<button class="btn green" ng-click="addMessage()" id="postBtn">Post</button>
+				</div>
+			</div> <!-- End Row -->
+
 	
 			<div>	
 				<div class="well messageWell" ng-repeat="message in messages | filter: sortByName | orderBy: 'created_at':true | limitTo: quantity" id="output">

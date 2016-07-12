@@ -523,6 +523,7 @@ app.controller('calendarController', function($scope, $state, $stateParams) {
 });
 
 app.controller('messagesController', function($scope, $state, $rootScope, $location, $stateParams, MessageService) {
+    $scope.quantity = 5;
     
     $scope.profilePic = $rootScope.user.customData.profilePic;
     MessageService.getAll()

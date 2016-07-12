@@ -45,13 +45,21 @@ h6 {
 	color: #3bbbac;
 }
 
+
 .radioForm input {
 	float: left;
 	margin-left: 15px;
+
 }
+
+.radioForm p {
+	color: #777777;
+}
+
 .radioLabel {
 	float: left;
 	margin-left: 15px;
+
 }
 
 .quantityBox .radioForm {
@@ -124,13 +132,17 @@ h6 {
 	margin-right: 2%;
 }
 .panel {
-	margin-top: 10%;
+	margin-top: 5%;
 	margin-bottom: 10%;
 	background-color: #638CA6;
 }
 
 #postBtn {
 	margin-top: -1%;
+}
+
+.messageSearchRow {
+	margin-top: 5%;
 }
 
 .messageWell {
