@@ -3,12 +3,12 @@
 	  	<div class="panel-body">
 				
 			<div id="messages">
-				<input id="input" placeholder="type message here.."/>
-				<button id="button">Post</button>
+				<input ng-model="message.post" id="input" placeholder="type message here."/>
+				<button class="btn green" ng-click="addMessage()" id="postBtn">Post</button>
 			</div>
 	
 			<div>	
-				<div class="well messageWell" ng-repeat="message in messages" id="output">
+				<div class="well messageWell" ng-repeat="message in messages | filter: sortByName | orderBy: 'created_at':true | limitTo: quantity" id="output">
 						<img class="postImg" width="60" ng-src="{{profilePic}}" alt="">
 						<h5>{{message.username}}: {{message.post}}</h5>
 						<h6>{{message.date | date:'medium' }}</h6>

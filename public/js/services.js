@@ -62,7 +62,7 @@ app.service('MemoriesService', function($http) {
 
   this.getAll = () => {
     return $http.get('/api/memories');
-  };
+  }
 
   this.create = memory => {
     return $http.post('/api/memories', memory);
@@ -74,7 +74,12 @@ app.service('MessageService', function($http) {
 
   this.getAll = () => {
     return $http.get('/api/messages');
-  };
+  }
+
+    this.create = message => {
+    return $http.post('/api/messages', message);
+  }
+
 });
 
 

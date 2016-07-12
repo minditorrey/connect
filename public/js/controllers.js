@@ -183,6 +183,7 @@ app.controller('checkInsController', function($scope, $state, $rootScope, $state
         CheckInService.create(checkIn)
             .then( (checkIn) => {
                 $('#myModal1').modal('hide');
+                $state.go($state.current, {}, {reload: true});
                 swal({ title: "Congrats!", text: "You have added your checkin.",
                     type: "success", closeOnConfirm: true }
                     );
@@ -211,6 +212,8 @@ app.controller('homeController', function($scope, CheckInService) {
 	    console.log('checkInEdit:', $scope.checkInEdit)
 	    $scope.checkInEdit = null;
 	    $scope.checkInForm = true;
+
+
 	}
 
     $scope.checkInForm = true;
@@ -454,6 +457,8 @@ app.controller('situationsController', function($scope, $state, $rootScope, $sta
             $scope.meanings = "";
             $scope.potential = "";
             $scope.resolution = "";
+            $state.go($state.current, {}, {reload: true});
+
             swal({ title: "Congrats!", text: "You have added your situation.",
                 type: "success", closeOnConfirm: true });       
         });
@@ -499,6 +504,7 @@ app.controller('memoriesController', function($scope, $state, $stateParams, $roo
         MemoriesService.create($scope.imageForm)
             .then((memory) => {
                 $scope.imageForm = "";
+                $state.go($state.current, {}, {reload: true});
                 swal({ title: "Congrats!", text: "You have added a new image.",
                 type: "success", closeOnConfirm: true });       
             });
@@ -517,6 +523,7 @@ app.controller('calendarController', function($scope, $state, $stateParams) {
 });
 
 app.controller('messagesController', function($scope, $state, $rootScope, $location, $stateParams, MessageService) {
+    
     $scope.profilePic = $rootScope.user.customData.profilePic;
     MessageService.getAll()
     .then(res => {
@@ -528,6 +535,20 @@ app.controller('messagesController', function($scope, $state, $rootScope, $locat
         console.log('err:', err);
     });
 
+    $scope.addMessage = function(message) {       
+    var message = {
+        post: $scope.message.post,
+        username: $scope.user.username, 
+        date: Date.now
+    }
+    console.log('message:', message)
+    MessageService.create(message)
+        .then((message) => {
+            $scope.message.post = ""; 
+            $state.go($state.current, {}, {reload: true});      
+        });
+
+    }
 
     // (function(){
     

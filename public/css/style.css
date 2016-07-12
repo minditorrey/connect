@@ -112,6 +112,12 @@ h6 {
 	margin-right: 3%;
 }
 
+#input {
+	height: 40px;
+	width: 250px;
+	font-size: 1.4em;
+	color: #d93240;
+}
 .postImg {
 	float: left;
 	clear: both;
@@ -120,6 +126,11 @@ h6 {
 .panel {
 	margin-top: 10%;
 	margin-bottom: 10%;
+	background-color: #638CA6;
+}
+
+#postBtn {
+	margin-top: -1%;
 }
 
 .messageWell {
