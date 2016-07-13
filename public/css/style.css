@@ -341,7 +341,7 @@ tr.orange:hover {
 
 .blocks {
 	margin-left: 3%;
-	margin-right: 3%;
+/*	margin-right: 3%;*/
 	margin-top: 1%;		
 }
 
@@ -378,6 +378,7 @@ div.block h2, div.checkInBlock h2 {
 	color: white;
 	box-shadow: 3px 3px 3px #3C3B40;
 	background-color: #3bbbac;
+	border-radius: 20px;
 }
 
 .checkInRow {
@@ -389,6 +390,11 @@ div.block h2, div.checkInBlock h2 {
 	background-color: #3bbbac;
 	color: #C7D1DD;
 	margin-top: 3%;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	box-shadow: 3px 3px 5px #3C3B40;
+	
 }
 
 .checkInComponent {
