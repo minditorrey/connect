@@ -524,7 +524,7 @@ app.controller('calendarController', function($scope, $state, $stateParams) {
 
 app.controller('messagesController', function($scope, $state, $rootScope, $location, $stateParams, MessageService) {
     $scope.quantity = 5;
-    
+
     $scope.profilePic = $rootScope.user.customData.profilePic;
     MessageService.getAll()
     .then(res => {
@@ -550,29 +550,6 @@ app.controller('messagesController', function($scope, $state, $rootScope, $locat
         });
 
     }
-
-    // (function(){
-    
-    // var input = PUBNUB.$('input');
-    // var button = PUBNUB.$('button');
-    // var output = PUBNUB.$('output');
-
-    // PUBNUB.subscribe({
-    //     channel: 'simple-chat',
-    //     callback: function(message) {
-    //         output.innerHTML = $scope.user.username + ': ' + message +'<br>' + output.innerHTML
-    //     }
-    // })
-
-    // PUBNUB.bind( 'mousedown, touchstart', button, function() {
-    //     PUBNUB.publish({
-    //         channel: 'simple-chat',
-    //         message: input.value
-    //     })
-    //     input.value = "";
-    // })  
-    // })();
-
 
 
 });
