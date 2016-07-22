@@ -1,4 +1,4 @@
-var app = angular.module('connectApp', ['ui.router', 'stormpath', 'stormpath.templates']);
+var app = angular.module('connectApp', ['ui.router', 'angulike', 'stormpath', 'stormpath.templates']);
 
 app.run(function($stormpath){
   $stormpath.uiRouter({

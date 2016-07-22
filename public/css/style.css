@@ -165,6 +165,38 @@ h6 {
 	color: black;
 }
 
+#socialLinks {
+	margin-right: 25%;
+	margin-top: 5%;
+
+}
+#socialLinks div.media {
+	margin-right: 20%;
+}
+
+	#socialLinks div {
+	float: right;
+	display: inline-block;
+	margin-left: 15%;
+	margin-bottom: 0;
+	margin-right: 10%;
+}
+
+#socialLinks p {
+	float: right;
+	margin-top: 10%;
+	margin-bottom: 5%;
+	margin-right: 20%;
+	color: #D93240;
+}
+
+#socialLinks div.tweet{
+	margin-top: 11%;
+}
+#socialLinks div.pin{
+	margin-top: 11%;
+}
+
 .dashboardLeftFoot a:hover {
 	text-decoration: none;
 	color: #3BBBAC;

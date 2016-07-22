@@ -24,6 +24,7 @@
     "sweetalert": "^1.1.3",
     "pubnub": "^3.15.2",
     "pubnub-angular": "^3.2.1",
-    "uuid": "^2.0.2"
+    "uuid": "^2.0.2",
+    "angulike": "^1.2.0"
   }
 }

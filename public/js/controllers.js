@@ -258,6 +258,11 @@ app.controller('homeController', function($scope, CheckInService) {
 
     };
 
+    $scope.myModel = {
+        Url: 'http://www.linkd.us/#/',
+        Name: "I like linkd!"
+    };
+      
 });
 
 app.controller('profilesController', function($scope, $state, $rootScope) {
