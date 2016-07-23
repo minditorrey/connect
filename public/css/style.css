@@ -166,34 +166,30 @@ h6 {
 }
 
 #socialLinks {
-	margin-right: 25%;
+
+	margin-right: 10%;
 	margin-top: 10%;
-
 }
+
 #socialLinks div.media {
-	margin-right: 20%;
-}
-
-	#socialLinks div {
 	float: right;
-	display: inline-block;
-	margin-left: 10%;
+	margin-left: 20%;
 	margin-bottom: 0;
-
 }
 
-#socialLinks p {
-	float: right;
-	margin-top: -5%;
-	margin-right: 15%;
-	color: #D93240;
-}
-
-#socialLinks div.tweet{
+#socialLinks div.tweet {
 	margin-top: 11%;
+	display: inline-block;
+	margin-left: 15%;
 }
-#socialLinks div.pin{
+#socialLinks div.fb {
 	margin-top: 11%;
+	display: inline-block;
+
+}
+#socialLinks div.pin {
+	margin-top: 11%;
+	display: inline-block;
 }
 
 .dashboardLeftFoot a:hover {
